@@ -15,6 +15,7 @@ author: Christopher Kornosky
 
 navbar-links:
   About Me: "aboutme"
+  About Portfolio:
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
@@ -41,12 +42,11 @@ round-avatar: true
 social-network-links:
   email: "someone@example.com"
   facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
+  github: Kornosky
+ # twitter: daattali
   youtube: c/daattali
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: daattali
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
