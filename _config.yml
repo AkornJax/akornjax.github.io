@@ -15,7 +15,7 @@ author: Christopher Kornosky
 
 navbar-links:
   About Me: "aboutme"
-  About Portfolio:
+  Portfolio:
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
