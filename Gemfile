@@ -9,3 +9,4 @@ gem 'tzinfo-data'
   gem 'jekyll-analytics'
 
   gem 'jekyll-spaceship'
+  gem 'jekyll-imagemagick', '~> 1.4'

@@ -1,14 +1,8 @@
 ---
-layout: page
+layout: default
 title: Art
 subtitle: I draw occasionally
-galleries:
-  - title: Link to homepage
-    image: /assets/img/my-image.jpg
-    url: /
-  - title: Link to image gallery
-    image: /assets/img/my-image.jpg
-    url: /
+
 ---
 
 {% include image-gallery.html folder="/assets/img/artportfolio/" %}
