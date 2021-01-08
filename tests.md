@@ -4,10 +4,10 @@ title: About me
 subtitle: Game Engineer | Game Designer | Technical Artist
 galleries:
   - title: Link to homepage
-    image: /assets/img/avatar-icon.png
+    image: {{site.baseurl}}/assets/img/my-image.jpg
     url: /
   - title: Link to image gallery
-    image: /assets/img/avatar-icon.png
+    image: {{site.baseurl}}/assets/img/my-image.jpg
     url: /
 ---
 
@@ -35,5 +35,5 @@ I am currently a student at TAMU University with an expected graduation in Fall 
 
 I hope you enjoy looking through my creative works and make sure to contact me for any questions, concerns, or if you just want to chat. 
 
-{% include image-gallery.html folder="/assets/img" %}
+{% include image-gallery.html folder="{{site.baseurl}}/assets/img/" %}
  {% youtube "https://www.youtube.com/watch?v=ho8-vK0L1_8" %}

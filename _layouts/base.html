@@ -36,5 +36,9 @@ common-js:
 
   {% include footer-scripts.html %}
 
+  {% if page.galleries %}{% include image-gallery-index.html %}{% endif %}
+
+  {% include lazyload.html %}
+
 </body>
 </html>

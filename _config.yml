@@ -20,8 +20,8 @@ navbar-links:
     - Coding:
     - Art:
   Projects:
-  Blog:
-  Contact:
+  Blog: "blog"
+  Contact: "contact"
 
 # --- Logo --- #
 
@@ -226,7 +226,91 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-
+  - jekyll-youtube
+  - jekyll-analytics
+  - jekyll-spaceship
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
+#Analytics
+jekyll_analytics:
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+    id: G-EHH69JQX1X        # Required - replace with your tracking id
+    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
+
+  # Matomo:                   # Add, if you want to track with Matomo (former Piwik Analytics)
+  #   url: matomo.example.com # Required - url to Matomo installation without trailing /
+  #   siteId: "1234"          # Required - replace with your Matomo site id (Write id as string)
+
+  # Piwik:                    # Add, if you want to track with Piwik
+  #   url: piwik.example.com  # Required - url to Piwik installation without trailing /
+  #   siteId: "1234"          # Required - replace with your Piwik site id (Write id as string)
+
+  # MPulse:                   # Add if you want to track performance with mPulse
+  #   apikey: XXXXX-YYYYY-ZZZZZ-AAAAA-23456   # Required - replace with your mPulse API key
+
+  # Plausible:
+  #   domain: 'example.com'   # The domain configured in plausible
+  #   source: 'https://plausible.example.com/js/plausible.js' # The source of the javascript
+
+  # Jekyll Spaceship
+jekyll-spaceship:
+  # default enabled processors
+  processors:
+    - table-processor
+    - mathjax-processor
+    - plantuml-processor
+    - mermaid-processor
+    - polyfill-processor
+    - media-processor
+    - emoji-processor
+    - element-processor
+  mathjax-processor:
+    src:
+      - https://polyfill.io/v3/polyfill.min.js?features=es6
+      - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    config:
+      tex:
+        inlineMath:
+          - ['$','$']
+          - ['\(','\)']
+        displayMath:
+          - ['$$','$$']
+          - ['\[','\]']
+      svg:
+        fontCache: 'global'
+    optimize: # optimization on building stage to check and add mathjax scripts
+      enabled: true # value `false` for adding to all pages
+      include: []   # include patterns for math expressions checking (regexp)
+      exclude: []   # exclude patterns for math expressions checking (regexp)
+  plantuml-processor:
+    mode: default  # mode value 'pre-fetch' for fetching image at building stage
+    css:
+      class: plantuml
+    syntax:
+      code: 'plantuml!'
+      custom: ['@startuml', '@enduml']
+    src: http://www.plantuml.com/plantuml/svg/
+  mermaid-processor:
+    mode: default  # mode value 'pre-fetch' for fetching image at building stage
+    css:
+      class: mermaid
+    syntax:
+      code: 'mermaid!'
+      custom: ['@startmermaid', '@endmermaid']
+    config:
+      theme: default
+    src: https://mermaid.ink/svg/
+  media-processor:
+    default:
+      id: 'media-{id}'
+      class: 'media'
+      width: '100%'
+      height: 350
+      frameborder: 0
+      style: 'max-width: 600px; outline: none;'
+      allow: 'encrypted-media; picture-in-picture'
+  emoji-processor:
+    css:
+      class: emoji
+    src: https://github.githubassets.com/images/icons/emoji/
