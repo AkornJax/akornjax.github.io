@@ -1,5 +1,5 @@
 ---
-layout: art
+layout: default
 title: Art
 subtitle: I draw occasionally
 
