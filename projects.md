@@ -18,7 +18,8 @@ subtitle: Game Engineer | Game Designer | Technical Artist
     <p>I am currently a student at TAMU University with an expected graduation in Fall 2020 (if everything goes well)
       and planning on continuing onto the Visualization Grad Program at TAMU.</p>
   </div>
-  <div class="column text-column">
+  <div class="column text-column" style="background-image: url('/assets/img/panacea.jpg'); filter: blur(1px);
+  -webkit-filter: blur(1px);">
     <h2>Panacea</h2>
     <p>I hope you enjoy looking through my creative works and make sure to contact me for any questions, concerns, or if
       you just want to chat.
