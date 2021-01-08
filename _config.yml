@@ -13,10 +13,10 @@ author: Christopher Kornosky
 
 navbar-links:
   About Me: "aboutme"
-  Portfolio:
-    - Games: 
-    - Coding:
-    - Art:
+  Portfolio: 
+    - Games: "games"
+    - Coding: "coding"
+    - Art: "art"
   Projects:
   Blog: "blog"
   Contact: "contact"
