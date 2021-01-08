@@ -106,6 +106,14 @@ layout: null
   border: 2px solid e82020;
 }
 
+.container-art{
+  width: 100%;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 /* text columns*/
 .text-column {
