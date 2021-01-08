@@ -21,10 +21,6 @@ I'm a passionate game developer and artist that strives to create something new 
     </embed>
 </object>
 
-<!---
-http://embedyoutube.org/
--->
-[![Kornosky Portoflio Demo Reel](http://img.youtube.com/vi/XgL42c2crBM/0.jpg)](http://www.youtube.com/watch?v=XgL42c2crBM "Kornosky Portoflio Demo Reel")
 
 ### My Education
 
