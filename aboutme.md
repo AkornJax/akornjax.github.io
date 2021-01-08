@@ -36,4 +36,4 @@ I am currently a student at TAMU University with an expected graduation in Fall 
 I hope you enjoy looking through my creative works and make sure to contact me for any questions, concerns, or if you just want to chat. 
 
 {% include image-gallery.html folder="/assets/img" %}
- {% youtube "https://www.youtube.com/watch?v=ho8-vK0L1_8" %}
+![](https://www.youtube.com/watch?v=Ptk_1Dc2iPY)
