@@ -30,6 +30,24 @@ layout: null
   color: d9480f;
 }
 
+.project-text-container{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255,255,255,.4);
+  border-radius: 5px;
+}
+.project-text-container-bot{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255,255,255,.4);
+  border-radius: 5px;
+
+  
+  bottom: 0;
+  width: 100%;
+  position: relative;
+}
+
 /** for da gifs **/
  figure.animated_gif_frame {
      position: relative;
@@ -104,6 +122,8 @@ layout: null
   margin: 1%;
   border-radius: 25px;
   border: 2px solid e82020;
+
+  filter: drop-shadow(0 0 0.70rem crimson);
 }
 
 .container-art{
