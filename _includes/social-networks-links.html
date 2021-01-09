@@ -276,4 +276,24 @@
   </li>
 {%- endif -%}
 
-</ul>
+{%- if site.social-network-links.itch -%}
+  <li class="list-inline-item">
+    <a href="https://artstation.com/{{ site.social-network-links.artstation }}" title="Artstation">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+          <img src="/assets/img/icons/coreui-icons-master/svg/brand/cib-artstation.svg">
+      </span>
+      <span class="sr-only">Patreon</span>
+    </a>
+  </li>
+{%- endif -%}
+
+{%- if site.social-network-links.itch -%}
+  <li class="list-inline-item">
+    <a href="https://{{ site.social-network-links.itch }}.itch.io" title="Itch.io">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+          <img src="/assets/img/icons/coreui-icons-master/svg/brand/cib-itch-io.svg">
+      </span>
+      <span class="sr-only">Patreon</span>
+    </a>
+  </li>
+{%- endif -%}
