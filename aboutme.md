@@ -19,10 +19,11 @@ subtitle: Game Engineer | Game Designer | Technical Artist
       and planning on continuing onto the Visualization Grad Program at TAMU.</p>
   </div>
   <div class="column text-column">
-    <h2>Closing Remarks</h2>
-    <p>I hope you enjoy looking through my creative works and make sure to contact me for any questions, concerns, or if
-      you just want to chat.
-    </p>
+    <h2>Achievements</h2>
+    <ul>
+      <li>Second place LIVE LAB 2020 Game Jam Winner (Panacea)</li>
+      <li>Winner of Unreal Engine Education Award</li>
+    </ul>
   </div>
   <div class="column text-column">
     <h2>Closing Remarks</h2>

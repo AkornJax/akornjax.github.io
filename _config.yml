@@ -13,11 +13,10 @@ author: Christopher Kornosky
 
 navbar-links:
   About Me: "aboutme"
-  Portfolio: 
-    - Games: "games"
-    - Coding: "coding"
-    - Art: "art"
+  Art: "art"
   Projects: "projects"
+  Portfolio:
+  - Game Development: "gamedevelopment-portfolio"  
   Blog: "blog"
   Contact: "contact"
 
@@ -43,12 +42,10 @@ social-network-links:
   email: "christopher.kornosky@gmail.com"
   github: Kornosky
  # twitter: daattali
-  youtube: c/daattali
   artstation: christopherkornosky
   itch: undeadknight11
 #  reddit: yourname
   linkedin: christopherkornosky
-  artstation: hmm
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -66,7 +63,7 @@ social-network-links:
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
-rss-description: This website is a virtual proof that I'm awesome
+#rss-description: This website is a virtual proof that I'm awesome
 
 # --- General options --- #
 

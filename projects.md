@@ -28,9 +28,17 @@ subtitle: Game Engineer | Game Designer | Technical Artist
     </div>   
   </button>
 
-  <button class="column text-column" onclick="location.href='idleclicker'" type="button">
-    <h2>Idle Clicker </h2>
+<div class="column text-column">
+  <button class="inside-column" onclick="location.href='aknightlysale'" type="button">
+    <h2>
+A Knightly Sale </h2>
     <p>WIP
     </p>
 
-</button>
+  <button class="inside-column" onclick="location.href='controlloss'" type="button">
+    <h2>
+Control Loss </h2>
+    <p>WIP
+    </p>
+
+  </button>
