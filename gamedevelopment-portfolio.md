@@ -3,10 +3,10 @@ layout: default
 title: Game Dev Portfolio
 ---
 
+<iframe id="media-XgL42c2crBM" class="media" src="https://www.youtube.com/embed/XgL42c2crBM?width=800=500" title="" width="800" height="500" style="    display: block;
+    margin: 0 auto; max-width: 600px; outline: none;" allow="encrypted-media; picture-in-picture" frameborder="0"></iframe>
 
-![](https://youtu.be/XgL42c2crBM?width=800&height=500)
-{: style="   display: block;
-   margin: 0 auto;"}
+
 
 ## My contribution to the Luci's Lemonade Stand:
 
