@@ -92,17 +92,17 @@ feed_show_tags: true
 # --- Colours / background image --- #
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
-
-navbar-col: "#692727"
+# https://www.schemecolor.com/blue-green-dragonfly.php
+navbar-col: "#003D72"
 navbar-text-col: "#00000"
-navbar-border-col: "#e82020"
-page-col: "#121212"
-text-col: "#b9619e"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#EAEAEA"
+navbar-border-col: "#025D6F"
+page-col: "#00060F"
+text-col: "#ffffff"
+link-col: "#6ABA63"
+hover-col: "#1EB373"
+footer-col: "#003D72"
 footer-text-col: "#777777"
-footer-link-col: "#404040"
+footer-link-col: "#6ABA63"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour

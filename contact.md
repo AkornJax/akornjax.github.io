@@ -14,18 +14,21 @@ permalink: /contact/
             <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Enter your name" required="required">
           </div>
           <div class="form-group">
-            <label for="exampleFormControlSelect1">Favourite Platform</label>
-            <select class="form-control" id="exampleFormControlSelect1" name="platform" required="required">
-              <option>Github</option>
-              <option>Gitlab</option>
-              <option>Bitbucket</option>
+            <label for="exampleFormControlSelect1">Reason</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="Reason" required="required">
+              <option>Other</option>
+              <option>Internship/Job Offer</option>
+              <option>Commission</option>
+              <option>Issue With Website</option>              
             </select>
           </div>
           <hr>
           <div class="form-group mt-3">
-            <label class="mr-2">Upload your CV:</label>
-            <input type="file" name="file">
+            <label class="mr-2">Upload any attachments:</label>
+            <input type="file" class="btn btn-primary" style="background-color: #6aba63;
+    border-color: #1EB373;" name="file">
           </div>
           <hr>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" style="background-color: #6aba63;
+    border-color: #1EB373;">Submit</button>
         </form>
