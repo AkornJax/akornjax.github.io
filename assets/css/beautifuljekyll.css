@@ -4,6 +4,12 @@ layout: null
 
 @import url("pygment_highlights.css");
 
+.btn-primary, .btn-primary:visited {
+  background-color: #6ABA63 !important;
+}
+.btn-primary:hover, .btn-primary:active {
+  background-color: #1EB373 !important;
+}
 /* --- General --- */
 .wrapper {
   display: grid;

@@ -3,40 +3,8 @@ layout: home
 title: Welcome To My Site
 subtitle: Incredibly WIP... Mind the mess.
 ---
-<head>
-    <meta charset=UTF-8 />
-    </head>
-    <body>
-        <p id="demo" class="button" onclick="myFunction()">Click me.</p>
-
-    <div class="demo-wrapper">
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script>
-    anime({
-        targets: '.square',
-        translateX: anime.stagger(150),
-        delay: anime.stagger(500, {from: 'last'}),
-        duration: 3000,
-        loop: true
-    });
-
-    function myFunction() {
-  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
-  anime({
-        targets: '.button',
-        translateX: 250,
-        duration: 3000,
-        loop: true
-    });
-}
-    </script>
-    </body>
-    </html>
-</head>
-    
+<div class="btn-group d-flex justify-content-center" role-"group">
+<button  class="btn btn-primary"  onclick="location.href='gamedevelopment-portfolio'" type="button">Portfolio</button>
+<button  class="btn btn-primary"  onclick="location.href='projects'" type="button">Games</button>
+<button  class="btn btn-primary"  onclick="location.href='art'" type="button">2D Works</button>
+</div>
