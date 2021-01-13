@@ -4,41 +4,52 @@ title: About me
 subtitle: Game Engineer | Game Designer | Technical Artist
 ---
 
-
-<div class="row">
-  <button class="column text-column " onclick="location.href='beleagueredwoods'" type="button">
-    <h2>Beleaguered Woods</h2>
-    <p>I'm a passionate game developer and artist that strives to create something new and unique for the world to see.
-      I push my game design skills by insuring that every decision is solidified by player testing and sufficient
-      research. When I'm not coding or planning on paper how to manage the flow of data for my project, I immerse myself
-      in the artistic passion of others whilst making sure I stretch my own art-muscles on a daily basis. </p>
-  </button>
-  <button class="column text-column" onclick="location.href='lucis'" type="button">
-    <h2>Luci's Lemonaide Stand</h2>
-    <p>I am currently a student at TAMU University with an expected graduation in Fall 2020 (if everything goes well)
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12" >
+      <button class="column" onclick="location.href='beleagueredwoods'" type="button">
+      <h2>Beleaguered Woods</h2>
+      <p>I'm a passionate game developer and artist that strives to create something new and unique for the world to see.
+        I push my game design skills by insuring that every decision is solidified by player testing and sufficient
+        research. When I'm not coding or planning on paper how to manage the flow of data for my project, I immerse myself
+        in the artistic passion of others whilst making sure I stretch my own art-muscles on a daily basis. </p>
+    </button>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12" >
+      <button class="column" onclick="location.href='lucis'" type="button">
+      <h2>Luci's Lemonaide Stand</h2>
+      <p>I am currently a student at TAMU University with an expected graduation in Fall 2020 (if everything goes well)
       and planning on continuing onto the Visualization Grad Program at TAMU.</p>
-  </button>
-  
-  <button class="column text-column" style="background-image: url('/assets/img/panacea.jpg'); " onclick="location.href='panacea'" type="button">
-    <div class="project-text-container">
-    <h2>Panacea</h2>
-    <p>I hope you enjoy looking through my creative works and make sure to contact me for any questions, concerns, or if
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12" >
+      <button class="column" style="background-image: url('/assets/img/panacea.jpg'); " onclick="location.href='panacea'" type="button">
+      <div class="project-text-container">
+      <h2>Panacea</h2>
+      <p>I hope you enjoy looking through my creative works and make sure to contact me for any questions, concerns, or if
       you just want to chat.
-    </p>
-    </div>   
-  </button>
-
-<div class="column text-column">
-  <button class="inside-column" onclick="location.href='aknightlysale'" type="button">
-    <h2>
-A Knightly Sale </h2>
-    <p>WIP
-    </p>
-
-  <button class="inside-column" onclick="location.href='controlloss'" type="button">
-    <h2>
-Control Loss </h2>
-    <p>WIP
-    </p>
-
-  </button>
+      </p>
+      </div>   
+      </button>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12" >
+      <div class="row">
+       <div class="column">
+        <button class="inside-column" onclick="location.href='aknightlysale'" type="button">
+        <h2>
+        A Knightly Sale </h2>
+        <p>WIP
+        </p>
+        <button class="inside-column" onclick="location.href='controlloss'" type="button">
+        <h2>
+        Control Loss </h2>
+        <p>WIP
+        </p>
+        </button>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>

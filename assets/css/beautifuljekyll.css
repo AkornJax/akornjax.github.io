@@ -80,7 +80,6 @@ layout: null
 
 /*columnsdd*/
 .column {
-  float: left;
   background-color:rgba(255,255,255,.1);
   /* width: 23%;
   margin: 1%; */
@@ -89,77 +88,8 @@ layout: null
   /*filter: drop-shadow(0 0 0.70rem crimson);*/
 }
 
-.column-split{
-  float: left;
-  background-color:rgba(255,255,255,.1);
-  width: 48%;
-  margin: 1%;
-  border-radius: 25px;
-  border: 2px solid e82020;
-}
-.inside-column {
-  float: left;
-  background-color:rgba(255,255,255,.1);
-  width: 100%;
-  height: 50%;
-  margin: 1%;
-  border-radius: 25px;
-  border: 2px solid e82020;
-  /*filter: drop-shadow(0 0 0.70rem crimson);*/
-}
-
-.container-art{
-  width: 100%;
-  max-width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* text columns*/
-.text-column {
-  text-align: center;
-  padding: 2%;
-}
-
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 1200px) {
-  .column {
-    width: 100%;
-  }
-}
-
-/* i WANT TO MAKE BUTTONS*/
-.one {
-  grid-column: 2;
-  grid-row: auto;
-}
-.two {
-  grid-column: 3;
-  grid-row: auto;
-  justify-content: center
-
-}
-.three {
-  grid-column: 2;
-  grid-row: auto;
-}
-.four {
-  grid-column: 3;
-  grid-row: auto;rgba(252, 81, 81, 0.1)
-}
-.columnattempt {
-  grid-column: 1;
-  grid-row: 1/3;
+.row-grid + .row-grid {
+  margin-top: 15px;
 }
 
 .square, .circle {

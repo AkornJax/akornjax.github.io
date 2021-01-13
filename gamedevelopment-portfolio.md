@@ -2,9 +2,9 @@
 layout: default
 title: Game Dev Portfolio
 ---
-  <div class="embed-responsive embed-responsive-1by1">
-<iframe id="media-XgL42c2crBM" class="media embed-responsive-item" src="https://www.youtube.com/embed/XgL42c2crBM?width=889=500" title="" width="889" height="500" style="    display: block;
-    margin: 0 auto; max-width: 889px; outline: none;" allow="encrypted-media; picture-in-picture" frameborder="0"></iframe>
+  <div class="embed-responsive embed-responsive-21by9">
+    <iframe id="media-XgL42c2crBM" class="media embed-responsive-item" src="https://www.youtube.com/embed/XgL42c2crBM?width=500=400" title="" width="500" height="400" style="    display: block;
+        margin: 0 auto;  max-height: 400px; max-width: 100%; outline: none;" allow="encrypted-media; picture-in-picture" frameborder="0"></iframe>
 </div>
 <div class="container-fluid">
     <div class="row gx-5 gy-5">
