@@ -9,7 +9,6 @@ title: Game Dev Portfolio
 <div class="container-fluid">
     <div class="row gx-5 gy-5">
         <div class="col-lg-6 col-md-6 col-sm-12 col-12 column text-column">
-
             <h1> My contribution to the Luci's Lemonade Stand:</h1>
             <p>
             Lead programmer, revised and refactored the code from the other programmers.
@@ -18,19 +17,15 @@ title: Game Dev Portfolio
 
             Worked in a team of seven over the duration of 10 weeks.
             Design decisions were focused on creating modular systems, emergent gameplay through physics-based interactions, and easily extendable gameplay.
-
             <hr>
             <b>Status:</b>  On-going development for summer studio.
             <br>
             <b>Links:</b> itch.io
             </p>
-
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-12 column text-column embed-responsive embed-responsive-1by1">
-
                 <iframe id="media-Y_U_a9qxtlQ" class="media embed-responsive-item" src="https://www.youtube.com/embed/Y_U_a9qxtlQ?width=500=500" title="" width="500" height="500" style="    display: block;
                 margin: 0 auto; max-width: 600px; outline: none;" allow="encrypted-media; picture-in-picture" frameborder="0"></iframe>
-
         </div>
     </div>
     <div class="row gx-5 gy-5">            

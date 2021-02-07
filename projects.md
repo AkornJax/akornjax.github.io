@@ -39,4 +39,11 @@ subtitle: Game Engineer | Game Designer | Technical Artist
       <p>Lose control to save yourself. A frightening journey lays ahead.</p>
     </div>
   </div>
-
+ <div class="row">
+    <div class="grow col-lg-6 col-md-6 col-sm-12 col-12 column" onclick="location.href='medievalrps';" style="cursor: pointer; background-image: url('/assets/img/medievalrps.png');" >
+      <div class="project-text-container ">
+        <h2>Medieval RPS</h2>
+        <p>Play Rock, Paper, Scissors against giant skeletons, defending your castle from its imminent demise.</p>
+     </div>
+    </div>
+  </div>

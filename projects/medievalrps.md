@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Panacea
+title: Medieval RPS
 ---
 
   <div class="embed-responsive embed-responsive-21by9">
