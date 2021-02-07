@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pandemic Life
-subtitle: How I've Been Handling The Situation
+title: The Battle Between Learning And Doing
+subtitle: How come working on a project is so draining sometimes?
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
 tags: [personal]
