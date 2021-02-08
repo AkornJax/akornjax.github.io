@@ -5,29 +5,28 @@ subtitle: Game Engineer | Game Designer | Technical Artist
 ---
 
 <div class="container">
-    <div class="row gx-5 equal">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-12  text-center">
-          <div class="column p-1">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-3 d-flex text-center hidden">
+          <div class="column p-4">
           <h2>My Goals</h2>
           <br>
-          <p>I'm a passionate game developer and artist that strives to create something new and unique for the world to see.
+          <p>I'm a developer that's obsessed with learning every step of the pipeline. By age 35 I hope to be able to develop AAA quality games as an indie developer.
             I push my game design skills by insuring that every decision is solidified by player testing and sufficient
             research. When I'm not coding or planning on paper how to manage the flow of data for my project, I immerse myself
             in the artistic passion of others whilst making sure I stretch my own art-muscles on a daily basis. </p>
         </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-12  text-center">
-      <div class="column p-1">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12 p-3 d-flex text-center hidden">
+      <div class="column p-4">
         <h2>My Education</h2>
         <br>
         <p>I am currently a student at TAMU University with an expected graduation in Fall 2020 (if everything goes well)
           and planning on continuing onto the Visualization Grad Program at TAMU.</p>
       </div>
     </div>
-  </div>
-  <div class="row gx-5 equal">
-    <div class="col-lg-6 col-md-6 col-sm-12 col-12  text-center">
-    <div class="column p-1">
+    <div class="w-100 h-100"></div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12  p-3 d-flex text-center hidden">
+    <div class="column p-4">
       <h2>Achievements</h2>
       <br>
       <ul>
@@ -36,8 +35,8 @@ subtitle: Game Engineer | Game Designer | Technical Artist
       </ul>
     </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-12  text-center">
-    <div class="column p-1">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12  p-3 d-flex text-center hidden">
+    <div class="column p-4">
       <h2>Closing Remarks</h2>
       <br>
       <p>I hope you enjoy looking through my creative works and make sure to contact me for any questions, concerns, or if

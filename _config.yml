@@ -17,7 +17,7 @@ navbar-links:
   Projects: "projects"
   Portfolio:
   - Game Development: "gamedevelopment-portfolio"  
-  Blog: "blog"
+  Resume: "resume"
   Contact: "contact"
 
 # --- Logo --- #

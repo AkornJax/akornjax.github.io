@@ -1,4 +1,5 @@
 
+
 (function() {
   var elements;
   var windowHeight;
@@ -25,4 +26,6 @@
 
   init();
   checkPosition();
+
 })();
+

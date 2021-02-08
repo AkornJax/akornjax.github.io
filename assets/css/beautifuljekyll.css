@@ -64,6 +64,7 @@ layout: null
   border-radius: 5px;
   display: inline-block;
   position: relative;
+  text-align: center;
   margin: 5%;
   padding: 5%;
   color:rgb(0, 0, 0);
@@ -94,7 +95,7 @@ layout: null
   to {opacity: 1;}
 }
 .fade-in-element {
-animation: fade-in 1.4s;
+animation: fade-in  1.4s;
 }
 
 /*columnsdd*/
