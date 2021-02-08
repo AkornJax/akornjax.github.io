@@ -120,7 +120,10 @@ function update()
   // Bind it to ARRAY_BUFFER (think of it as ARRAY_BUFFER = positionBuffer)
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
   
-  // Set a rectangle the same size as the image.
+  // Set a rectangle the same size as the image. (When image is loaded)
+  if(images == null)
+    return
+    //hm
   setRectangle(gl, 0, 0, images[0].width, images[0].height);
 
   // provide texture coordinates for the rectangle.
