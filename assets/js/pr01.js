@@ -2,8 +2,10 @@
 
 /** Variables to be modified at runtime */
 var shiny = .5;
-var image01Opacity = .5;
-var image02Opacity = .5;
+var darkImageOpacity = .5;
+var lightImageOpacity = .5;
+var normalImageOpacity = .5;
+
 var lightIntensity = .5;
 var lightColor = new Float32Array(3);
 var normalsExist = false;
@@ -14,14 +16,16 @@ var mousePosition = new Float32Array(2);
 // Get A WebGL context
 /** @type {HTMLCanvasElement} */
 var canvas = document.querySelector("#canvas");
-var gl = canvas.getContext("webgl");
+var gl = canvas.getContext("webgl2");
 // setup GLSL program
 var program = webglUtils.createProgramFromScripts(gl, ["vertex-shader-2d", "fragment-shader-2d"]);
 gl.useProgram(program);
 //images variable to hold the images
 var images;
-var u_image0Location;
-var u_image1Location;
+var u_imageDarkLocation;
+var u_imageLightLocation;
+var u_imageNormalLocation;
+var textures;
 
 function loadImage(url, callback) {
   var image = new Image();
@@ -57,15 +61,37 @@ function init(imgs)
   // Tell it to use our program (pair of shaders)
   gl.useProgram(program);
 
+  // create 2 textures
+  textures = [];
+  for (var ii = 0; ii < 3; ++ii) {
+    var texture = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+
+    // Set the parameters so we can render any size image.
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+
+    // Upload the image into the texture.
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, images[ii]);
+
+    // add the texture to the array of textures.
+    textures.push(texture);
+  }
   /** Would only need to be done if I were changing textures/images */
   // lookup the sampler locations.
-  u_image0Location = gl.getUniformLocation(program, "u_image0");
-  u_image1Location = gl.getUniformLocation(program, "u_image1");
+  u_imageDarkLocation = gl.getUniformLocation(program, "u_imageDark");
+  u_imageLightLocation = gl.getUniformLocation(program, "u_imageLight");
+  u_imageNormalLocation = gl.getUniformLocation(program, "u_imageNormal");
   // set which texture units to render with.
-  gl.uniform1i(u_image0Location, 0);  // texture unit 0
-  gl.uniform1i(u_image1Location, 1);  // texture unit 1
+  gl.uniform1i(u_imageDarkLocation, 0);  // texture unit 0
+  gl.uniform1i(u_imageLightLocation, 1);  // texture unit 1
+  gl.uniform1i(u_imageNormalLocation, 2);  // texture unit 1
   
+  /**Things that need to be done to redraw */
   update();
+
   /** Needs to be done after setting variables */
   // lookup uniforms
   var resolutionLocation = gl.getUniformLocation(program, "u_resolution");
@@ -96,15 +122,18 @@ function getNoPaddingNoBorderCanvasRelativeMousePosition(event, target) {
 
 function update()
 {   
-  const image01Opacity_Loc = gl.getUniformLocation(program, "image01Opacity");
-  const image02Opacity_Loc = gl.getUniformLocation(program, "image02Opacity");
+  const darkOpacity_Loc = gl.getUniformLocation(program, "f_darkImageOpacity");
+  const lightOpacity_Loc = gl.getUniformLocation(program, "f_lightImageOpacity");
+  const normalOpacity_Loc = gl.getUniformLocation(program, "f_normalImageOpacity");
   const u_lightPosition_Loc = gl.getUniformLocation(program, "u_lightPosition");
   const u_lightIntensity_Loc = gl.getUniformLocation(program, "u_lightIntensity");
   const u_lightColor_Loc = gl.getUniformLocation(program, "u_lightColor");
   
   //set variables in shaderes
-  gl.uniform1f(image01Opacity_Loc, image01Opacity);
-  gl.uniform1f(image02Opacity_Loc, image02Opacity);
+  gl.uniform1f(darkOpacity_Loc, darkImageOpacity);
+  gl.uniform1f(lightOpacity_Loc, lightImageOpacity);
+  gl.uniform1f(normalOpacity_Loc, normalImageOpacity);
+ 
  // console.log(mousePosition);
   gl.uniform2fv(u_lightPosition_Loc, mousePosition);    
   gl.uniform1f(u_lightIntensity_Loc, lightIntensity);    
@@ -138,24 +167,7 @@ function update()
       1.0,  1.0,
   ]), gl.STATIC_DRAW);
 
-  // create 2 textures
-  var textures = [];
-  for (var ii = 0; ii < 2; ++ii) {
-    var texture = gl.createTexture();
-    gl.bindTexture(gl.TEXTURE_2D, texture);
 
-    // Set the parameters so we can render any size image.
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
-
-    // Upload the image into the texture.
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, images[ii]);
-
-    // add the texture to the array of textures.
-    textures.push(texture);
-  }
 
   webglUtils.resizeCanvasToDisplaySize(gl.canvas);
 
@@ -199,7 +211,8 @@ function update()
   gl.bindTexture(gl.TEXTURE_2D, textures[0]);
   gl.activeTexture(gl.TEXTURE1);
   gl.bindTexture(gl.TEXTURE_2D, textures[1]);
-
+  gl.activeTexture(gl.TEXTURE2);
+  gl.bindTexture(gl.TEXTURE_2D, textures[2]);
   // Draw the rectangle.
   gl.drawArrays(gl.TRIANGLES, 0, 6);
 
@@ -223,8 +236,9 @@ function setRectangle(gl, x, y, width, height) {
   ]), gl.STATIC_DRAW);
 }
 
-var image1 = "/assets/img/project01Images/cara-dark.png";
-var image2 = "/assets/img/project01Images/cara-normal.png";
+var dark = "/assets/img/project01Images/cara-dark.png";
+var light = "/assets/img/project01Images/cara-light.png";
+var normal = "/assets/img/project01Images/cara-normal.png";
 
 function updateNow()
 {
@@ -233,8 +247,9 @@ function updateNow()
 
 function main() {
   loadImages([
-    image1,
-    image2,
+    dark,
+    light,
+    normal,
   ], init);
 
   updateNow();
