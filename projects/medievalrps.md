@@ -4,41 +4,48 @@ title: Medieval RPS
 ---
 
   <div class="embed-responsive embed-responsive-21by9">
-    <iframe id="media-948EMzf3IWo" class="media embed-responsive-item" src="https://www.youtube.com/embed/948EMzf3IWo?width=500=400" title="" width="500" height="400" style="    display: block;
+    <iframe id="media-FIla7YmwZHg" class="media embed-responsive-item" src="https://www.youtube.com/embed/FIla7YmwZHg?width=500=400" title="" width="500" height="400" style="    display: block;
         margin: 0 auto;  max-height: 400px; max-width: 100%; outline: none;" allow="encrypted-media; picture-in-picture" frameborder="0"></iframe>
 </div>
 
-Carousel:
-
-<a href="panceapostmortem"> Link to postmortem blog </a> 
 <div class="hidden">
 <p>
-My contribution to the Panacea:
+My contribution to the Medieval RPS:
     <ul>
         <li>
-        I coded and designed all aspects of the overworld to guide the player to their next encounter but allow for exploration. 
+  Modeled, textured, rigged, and animated hands to give the player a strong, unique character representation. 
         </li>
         <li>
-        I designed all the pixel art animations designed to complement the gameplay and tell a story. (Goto)
+     Conceptualized, rigged, and animated 2D skeleton bosses to add character and movement to the screen.
         </li>
         <li>
-        I designed and implemented the dialogue system to drive visual storytelling. 
+       Created UE4 shaders for visually showing status effects present on players.
         </li>
         <li>
         I implemented the sound to enhance player feedback.
         </li> ​
-        I made drastic, tactful cuts to the scope to ensure that we had a full experience by the deadline.
+        I made drastic, tactful cuts to the scope to ensure that the project was a full experience by the deadline.
         </li>
         <li>
-        Contributed to character and battle design.
+        Engineered and tweaked all gameplay elements based off observations from player testing.
         </li>
     </ul>
 </p>
 </div>
 
-Worked with a team of three to make a turn-based RPG in the span of two weeks. 
-The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
-Status:  On-going development for TAMU Vizagogo, due the 27th.
+Created for the TAMU Game Studio Fall 2019.
+Conceived during a game jam at the beginning of the semester with the prompt of "rock, paper, scissors" and decided to stick with the game idea and push it as far as possible.
+Two-player co-op game where you play rock, paper, scissors against giant skeletons using the mystical power of the jewelry given "accidentally" by the first skeleton. 
+
+Status:  Finished, but interested in recreating it.
+
 Links:
-​Itch.io
-Teaser Video
+<ul>
+<li>
+​<a href="https://undeadknight11.itch.io/medievalrps">
+Play on Itch.io </a>
+</li>
+<li>
+<a href="panceapostmortem"> Postmortem Blog </a> 
+</li>
+</ul>

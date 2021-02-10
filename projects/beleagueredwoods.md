@@ -1,18 +1,17 @@
 ---
 layout: default
-title: Panacea
+title: Beleagured Woods
 ---
 
   <div class="embed-responsive embed-responsive-21by9">
-    <iframe id="media-948EMzf3IWo" class="media embed-responsive-item" src="https://www.youtube.com/embed/948EMzf3IWo?width=500=400" title="" width="500" height="400" style="    display: block;
+    <iframe id="media-I2E485B-INg" class="media embed-responsive-item" src="https://www.youtube.com/embed/I2E485B-INg?width=500=400" title="" width="500" height="400" style="    display: block;
         margin: 0 auto;  max-height: 400px; max-width: 100%; outline: none;" allow="encrypted-media; picture-in-picture" frameborder="0"></iframe>
 </div>
-
-{% include carousel.html name="panacea" height="50" unit="%" duration="7" %}
+{% include carousel.html name="beleagueredwoods" height="50" unit="%" duration="7" %}
 
 <div class="hidden">
 <p>
-My contribution to the Panacea:
+My contribution to the BeleaguredWoods:
     <ul>
         <li>
         I coded and designed all aspects of the overworld to guide the player to their next encounter but allow for exploration. 
@@ -35,17 +34,18 @@ My contribution to the Panacea:
 </p>
 </div>
 
-Worked with a team of three to make a turn-based RPG in the span of two weeks. 
-The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
+Student project made in 14 weeks for TAMU Fall Game Studio 2020
 
-Status:  Complete for now.
+
+Status:  Finished, but being converted to C++ for practice.
+
 Links:
 <ul>
 <li>
-​<a href="https://undeadknight11.itch.io/panacea">
+​<a href="https://undeadknight11.itch.io/beleagueredwoods">
 Play on Itch.io </a>
 </li>
 <li>
-<a href="panceapostmortem"> Postmortem Blog </a> 
+<a href="beleaguredwoodspostmortem"> Postmortem Blog </a> 
 </li>
 </ul>

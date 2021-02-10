@@ -1,10 +1,10 @@
 {% assign letterstring = "a,b,c,d,e,f,g,h,i,j,k,l,m,n" %}
 {% assign letters = letterstring | split: ',' %}
-{% assign images = {{site.data.carousel.{{ include.name }}}}|make_list  %}
+{% assign images = site.data.carousel[include.name] %}
 
 <div class="carousel__holder">
     <div class="carousel">
-        {% for item in images }}%}
+        {% for item in images %}
           <input class="carousel__activator" type="radio" name="carousel" id="{{ letters[forloop.index0] }}" {% if forloop.first %}checked="checked"{% endif %} />
         {% endfor %}
         {% for item in images %}
@@ -28,7 +28,6 @@
         <div class="carousel__track">
           <ul>
             {% for item in images %}
-            {{item}}
             <li class="carousel__slide" style="background-image: url('{{ item }}');"></li>
             {% endfor %}
           </ul>

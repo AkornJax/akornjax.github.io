@@ -4,11 +4,10 @@ title: Panacea
 ---
 
   <div class="embed-responsive embed-responsive-21by9">
-    <iframe id="media-948EMzf3IWo" class="media embed-responsive-item" src="https://www.youtube.com/embed/948EMzf3IWo?width=500=400" title="" width="500" height="400" style="    display: block;
+    <iframe id="media-Y_U_a9qxtlQ" class="media embed-responsive-item" src="https://www.youtube.com/embed/Y_U_a9qxtlQ?width=500=400" title="" width="500" height="400" style="    display: block;
         margin: 0 auto;  max-height: 400px; max-width: 100%; outline: none;" allow="encrypted-media; picture-in-picture" frameborder="0"></iframe>
 </div>
-
-{% include carousel.html name="panacea" height="50" unit="%" duration="7" %}
+{% include carousel.html name="lucis" height="50" unit="%" duration="7" %}
 
 <div class="hidden">
 <p>
@@ -38,11 +37,12 @@ My contribution to the Panacea:
 Worked with a team of three to make a turn-based RPG in the span of two weeks. 
 The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
 
-Status:  Complete for now.
+Status:  Finished, interested in recreating in Unreal Engine.
+
 Links:
 <ul>
 <li>
-​<a href="https://undeadknight11.itch.io/panacea">
+​<a href="https://undeadknight11.itch.io/lucis-lemonade-stand">
 Play on Itch.io </a>
 </li>
 <li>
