@@ -37,8 +37,9 @@ My contribution to the Panacea:
 
 Worked with a team of three to make a turn-based RPG in the span of two weeks. 
 The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
-
+<br>
 Status:  Complete for now.
+<br>
 Links:
 <ul>
 <li>
