@@ -137,7 +137,7 @@ function update()
  // console.log(mousePosition);
   gl.uniform2fv(u_lightPosition_Loc, mousePosition);    
   gl.uniform1f(u_lightIntensity_Loc, lightIntensity);    
-  //gl.uniform3fv(u_lightColor_Loc, lightColor);    //need to make color slider
+  gl.uniform3fv(u_lightColor_Loc, lightColor);    //need to make color slider
   
   // look up where the vertex data needs to go.
   var positionLocation = gl.getAttribLocation(program, "a_position");

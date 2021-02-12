@@ -20,8 +20,7 @@ subtitle: Game Engineer | Game Designer | Technical Artist
       <div class="column p-4">
         <h2>My Education</h2>
         <br>
-        <p>I am currently a student at TAMU University with an expected graduation in Fall 2020 (if everything goes well)
-          and planning on continuing onto the Visualization Grad Program at TAMU.</p>
+        <p>I am currently a Graduate student at TAMU University, working towards a Masters of Science   in Visualization. Expected graduation is June 2023</p>
       </div>
     </div>
     <div class="w-100 h-100"></div>
@@ -39,15 +38,15 @@ subtitle: Game Engineer | Game Designer | Technical Artist
     <div class="column p-4">
       <h2>Closing Remarks</h2>
       <br>
-      <p>I hope you enjoy looking through my creative works and make sure to contact me for any questions, concerns, or if
+      <p>I hope you enjoy looking through my creative works and please contact me with any questions, concerns, or if
         you just want to chat.
       </p>
     </div>
     </div>
   </div>
 </div>
-
-<div class="row">
+<br>
+<div class="row resume-container">
   <div style="width: 820px;margin-left: auto ;margin-right: auto ;">
     <iframe
       src="http://docs.google.com/viewer?url=http://kornosky.github.io/assets/img/ChristopherKornoskyResume2020.pdf&embedded=true"

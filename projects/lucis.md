@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Panacea
+title: Lucis Lemonade Stand
 ---
 
   <div class="embed-responsive embed-responsive-21by9">
