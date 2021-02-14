@@ -13,11 +13,12 @@ author: Christopher Kornosky
 
 navbar-links:
   About Me: "aboutme"
-  Art: "art"
   Projects: "projects"
   Portfolio:
   - Game Development: "gamedevelopment-portfolio"  
-  VIZA656: "viza656home"
+  Art: "art"
+  Incomplete:
+  - VIZA656: "viza656home"
   Contact: "contact"
 
 # --- Logo --- #

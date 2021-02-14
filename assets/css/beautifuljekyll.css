@@ -2,7 +2,18 @@
 layout: null
 ---
 /**mobile tests*/
+/** icons */
+.icon-background{
+  position: absolute;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  right: 0;
+  z-index: -70;
+  top: 25%;
+}
 
+/** end icons */
  /* if desktop */
  .mobile_device_380px {
   display: none;
