@@ -9,7 +9,7 @@ title: Game Dev Portfolio
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-12 column p-4 fade-in-element ">
-            <h1> My contribution to the Luci's Lemonade Stand:</h1>
+            <h1>Luci's Lemonade Stand:</h1>
             <p>
             <ul> 
              <li>Lead programmer, revised and refactored the code from the other programmers.</li>
@@ -20,7 +20,7 @@ title: Game Dev Portfolio
             Worked in a team of seven over the duration of 10 weeks.
             Design decisions were focused on creating modular systems, emergent gameplay through physics-based interactions, and easily extendable gameplay.
             <hr>
-            <b>Status:</b>  On-going development for summer studio.
+            <b>Status:</b> On-going development for summer studio.
             <br>
             <b>Links:</b> itch.io
             </p>
@@ -32,7 +32,7 @@ title: Game Dev Portfolio
     </div>
     <div class="row ">            
         <div class="col-lg-6 col-md-6 col-sm-12 col-12 column   p-4 fade-in-element ">
-        <h1> My contribution to the Panacea:</h1>
+        <h1>Panacea:</h1>
         <p>
         <ul>
         <li>I coded and designed all aspects of the overworld to guide the player to their next encounter but allow for exploration. </li>
@@ -48,7 +48,7 @@ title: Game Dev Portfolio
         Worked with a team of three to make a turn-based RPG in the span of two weeks. 
         The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
           <hr>
-            <b>Status:</b>  On-going development for summer studio.
+            <b>Status:</b> On-going development for summer studio.
             <br>
             <b>Links:</b> itch.io
             </p>  
@@ -60,7 +60,7 @@ title: Game Dev Portfolio
     </div>
     <div class="row ">
         <div class="col-lg-6 col-md-6 col-sm-12 col-12 column   p-4 fade-in-element ">
- <h1> My contribution to the Medieval RPS:</h1>
+ <h1>Medieval RPS:</h1>
          <p>
          <ul>
             <li>Modeled, textured, rigged, and animated hands to give the player a strong, unique character representation. </li>
@@ -73,7 +73,7 @@ title: Game Dev Portfolio
             Conceived during a game jam at the beginning of the semester with the prompt of "rock, paper, scissors" and decided to stick with the game idea and push it as far as possible.
             Two-player co-op game where you play rock, paper, scissors against giant skeletons using the mystical power of the jewelry given "accidentally" by the first skeleton. 
        <hr>
-            <b>Status:</b>  On-going development for summer studio.
+            <b>Status:</b> On-going development for summer studio.
             <br>
             <b>Links:</b> itch.io
             </p>
