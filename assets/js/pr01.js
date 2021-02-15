@@ -2,21 +2,24 @@
 
 /** Variables to be modified at runtime */
 var shiny = .5;
-var darkImageOpacity = .5;
-var lightImageOpacity = .5;
-var normalImageOpacity = .5;
+var darkImageOpacity = 1;
+var lightImageOpacity = 1;
+var normalImageOpacity = 1;
 
-var lightIntensity = .5;
+var lightIntensity = 1;
 var lightColor = new Float32Array(3);
 var normalsExist = false;
 var multiply = false;
 var overlay = false;
-var mousePosition = new Float32Array(2);
+var mousePosition = new Float32Array(3);
 
 // Get A WebGL context
 /** @type {HTMLCanvasElement} */
 var canvas = document.querySelector("#canvas");
 var gl = canvas.getContext("webgl2");
+canvas.width = 400;
+canvas.height = 700;
+
 // setup GLSL program
 var program = webglUtils.createProgramFromScripts(gl, ["vertex-shader-2d", "fragment-shader-2d"]);
 gl.useProgram(program);
@@ -79,6 +82,7 @@ function init(imgs)
     // add the texture to the array of textures.
     textures.push(texture);
   }
+
   /** Would only need to be done if I were changing textures/images */
   // lookup the sampler locations.
   u_imageDarkLocation = gl.getUniformLocation(program, "u_imageDark");
@@ -122,20 +126,48 @@ function getNoPaddingNoBorderCanvasRelativeMousePosition(event, target) {
 
 function update()
 {   
+    // Compute the matrix
+    var aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
+    var zNear = 1;
+    var zFar = 2000;
+
+    // Compute the camera's matrix
+    var camera = [100, 150, 200];
+    var target = [0, 35, 0];
+    var up = [0, 1, 0];
+    var cameraMatrix = m4.lookAt(camera, target, up);
+
+    // Make a view matrix from the camera matrix.
+    var viewMatrix = m4.inverse(cameraMatrix);
+    var worldMatrix = m4.yRotation(30);
   const darkOpacity_Loc = gl.getUniformLocation(program, "f_darkImageOpacity");
   const lightOpacity_Loc = gl.getUniformLocation(program, "f_lightImageOpacity");
   const normalOpacity_Loc = gl.getUniformLocation(program, "f_normalImageOpacity");
   const u_lightPosition_Loc = gl.getUniformLocation(program, "u_lightPosition");
   const u_lightIntensity_Loc = gl.getUniformLocation(program, "u_lightIntensity");
   const u_lightColor_Loc = gl.getUniformLocation(program, "u_lightColor");
+  //light stuff
+
+  var lightWorldPositionLocation =
+  gl.getUniformLocation(program, "u_lightWorldPosition");
+  var worldLocation =
+  gl.getUniformLocation(program, "u_world");
   
+  console.log( mousePosition);
+  // set the light position
+  gl.uniform3fv(lightWorldPositionLocation, mousePosition);
+    // Set the matrices
+    gl.uniformMatrix4fv(
+      worldLocation, false,
+      worldMatrix);
+      
+
   //set variables in shaderes
   gl.uniform1f(darkOpacity_Loc, darkImageOpacity);
   gl.uniform1f(lightOpacity_Loc, lightImageOpacity);
   gl.uniform1f(normalOpacity_Loc, normalImageOpacity);
- 
  // console.log(mousePosition);
-  gl.uniform2fv(u_lightPosition_Loc, mousePosition);    
+  gl.uniform3fv(u_lightPosition_Loc, mousePosition);    
   gl.uniform1f(u_lightIntensity_Loc, lightIntensity);    
   gl.uniform3fv(u_lightColor_Loc, lightColor);    //need to make color slider
   
@@ -166,8 +198,6 @@ function update()
       1.0,  0.0,
       1.0,  1.0,
   ]), gl.STATIC_DRAW);
-
-
 
   webglUtils.resizeCanvasToDisplaySize(gl.canvas);
 
@@ -216,6 +246,11 @@ function update()
   // Draw the rectangle.
   gl.drawArrays(gl.TRIANGLES, 0, 6);
 
+
+   // lookup uniforms
+   var resolutionLocation = gl.getUniformLocation(program, "u_resolution");
+   // set the resolution
+   gl.uniform2f(resolutionLocation, gl.canvas.width, gl.canvas.height);
   }
 function randomInt(range) {
   return Math.floor(Math.random() * range);
