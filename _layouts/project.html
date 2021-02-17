@@ -1,0 +1,43 @@
+---
+layout: default
+---
+{% assign game = site.data.projects[page.title] %}
+{% assign youtubeIDD = site.data.projects[page.title].youtube-key %}
+
+{% include youtube.html youtubeID=youtubeIDD %}
+{% include carousel.html name=game.images-folder height="50" unit="%" duration="7" %}
+
+<div class="container">
+  <div class="row g-4">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex hidden">
+      <div class="column">
+        <p>
+          {% for item in game.bullets %}
+          <ul class="justify-left">
+            <li>
+              {{item | markdownify}}
+            </li>
+          </ul>
+          {% endfor %}
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex hidden text-center column">
+      {{game.extra | markdownify}}
+    </div>
+  </div>
+</div>
+
+<br>
+Status: {{game.status}}
+<br>
+Links:
+<ul>
+  <li>
+    ​<a href="{{game.itchio-url}}">
+      Play on Itch.io </a>
+  </li>
+  <li>
+    <a href="{{game.blog-page}}"> Postmortem Blog </a>
+  </li>
+</ul>

@@ -1,0 +1,102 @@
+Medieval RPS:
+    background-image-url: /assets/img/bw.png
+    blog-page: "page path"
+    youtube-key: FIla7YmwZHg
+    images-folder: medievalrps
+    breakdown-url: /projects/medievalrps
+    itchio-url: https://undeadknight11.itch.io/medievalrps
+    project-blurb: Play Rock, Paper, Scissors against giant skeletons, defending your castle from its imminent demise.
+    bullets:
+      - Modeled, textured, rigged, and animated hands to give the player a strong, unique character representation.
+      - Conceptualized, rigged, and animated 2D skeleton bosses to add character and movement to the screen.
+      - Created UE4 shaders for visually showing status effects present on players.
+      - I implemented the sound to enhance player feedback.
+      - I made drastic, tactful cuts to the scope to ensure that the project was a full experience by the deadline. 
+      - Engineered and tweaked all gameplay elements based off observations from player testing.
+    extra: |
+      Created for the TAMU Game Studio Fall 2019. 
+      Conceived during a game jam at the beginning of the semester with the prompt of “rock, paper, scissors” and decided to stick with the game idea and push it as far as possible. 
+      Two-player co-op game where you play rock, paper, scissors against giant skeletons using the mystical power of the jewelry given “accidentally” by the first skeleton.
+    status: Finished, but interested in recreating it.
+
+Panacea:
+    background-image-url: /assets/img/panacea.png
+    blog-page: "page path"
+    youtube-key: 948EMzf3IWo
+    images-folder: panacea
+    breakdown-url: /projects/panacea
+    itchio-url: https://undeadknight11.itch.io/panacea
+    project-blurb: A turn-based RPG following three professionals as they traverse the virus-ridden island.
+    bullets:
+      - I coded and designed all aspects of the overworld to guide the player to their next encounter but allow for exploration.
+      - I designed all the pixel art animations designed to complement the gameplay and tell a story. 
+      - I designed and implemented the dialogue system to drive visual storytelling.
+      - I made drastic, tactful cuts to the scope to ensure that we had a full experience by the deadline. 
+      - Contributed to character and battle design.
+      - I implemented the sound to enhance player feedback.
+    extra: |
+      Worked with a team of three to make a turn-based RPG in the span of two weeks. 
+      The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
+    status: Complete for now.
+
+Lucis Lemonade Stand:
+    background-image-url: /assets/img/lls.png
+    blog-page: "page path"
+    youtube-key: Y_U_a9qxtlQ
+    images-folder: lucis
+    breakdown-url: /projects/lucis
+    itchio-url: https://undeadknight11.itch.io/lucis-lemonade-stand
+    project-blurb: Serve beverages to the denizens of this hellish suburbia.
+    bullets:
+      - I coded and designed all aspects of the overworld to guide the player to their next encounter but allow for exploration.
+      - I designed all the pixel art animations designed to complement the gameplay and tell a story. (Goto)
+      - I designed and implemented the dialogue system to drive visual storytelling.
+      - I implemented the sound to enhance player feedback.
+      - ​I made drastic, tactful cuts to the scope to ensure that we had a full experience by the deadline. 
+      - Contributed to character and battle design.
+    extra: |
+      Worked with a team of three to make a turn-based RPG in the span of two weeks. 
+      The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
+    status: Finished, interested in recreating in Unreal Engine.
+
+Beleaguered Woods:
+    background-image-url: /assets/img/bw.png
+    blog-page: "page path"
+    youtube-key: I2E485B-INg
+    images-folder: bwoods
+    breakdown-url: /projects/beleagueredwoods
+    itchio-url: https://undeadknight11.itch.io/beleagueredwoods
+    project-blurb: Traverse the magical forest - fulfill your duty as the Seeker and return the ghosts to the fountain.
+    bullets:
+      - I coded and designed all aspects of the overworld to guide the player to their next encounter but allow for exploration.
+      - I designed all the pixel art animations designed to complement the gameplay and tell a story. (Goto)
+      - I designed and implemented the dialogue system to drive visual storytelling.
+      - I implemented the sound to enhance player feedback.
+      - ​I made drastic, tactful cuts to the scope to ensure that we had a full experience by the deadline. </li>
+      - Contributed to character and battle design.
+    extra: |
+      Student project made in 14 weeks for TAMU Fall Game Studio 2020
+    status: Finished, but being converted to C++ for practice.
+
+A Knightly Sale:
+    background-image-url: /assets/img/knightlySale.png
+    blog-page: "page path"
+    youtube-key: 
+    images-folder: "folder"
+    breakdown-url: /projects/aknightlysale
+    itchio-url:
+    project-blurb:
+    bullets:
+    extra: |
+
+Control Loss:
+    background-image-url: /assets/img/controlLoss.png
+    blog-page: "page path"
+    youtube-key: 
+    images-folder: "folder"
+    breakdown-url: /projects/controlloss
+    itchio-url:
+    project-blurb:
+    bullets:
+    extra:
+    status:

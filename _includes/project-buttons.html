@@ -1,0 +1,13 @@
+<div class="container gap-3">
+  <div class="row d-flex ">
+  {% for project in site.data.projects %}
+    <div class="grow col-lg-4 col-md-4 col-sm-4 col-4 column p-2 hidden d-flex justify-content-center"
+      onclick="location.href='{{project[1].breakdown-url}}';"
+      style="cursor: pointer; background-image: url('{{project[1].background-image-url}}');">
+      <div class="project-text-container ">
+        <h4>{{project[0]}}</h4>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
