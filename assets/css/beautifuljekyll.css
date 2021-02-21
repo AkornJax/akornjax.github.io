@@ -134,6 +134,7 @@ animation: fade-in  1.4s;
   background-color:rgba(255,255,255,.1);
   background-repeat: repeat;
   background-position: center;
+  /* box-shadow: 0 0 5px 5px #1f252e8c; */
   /* width: 23%;
   margin: 1%; */
   border-radius: 25px;
@@ -273,7 +274,9 @@ img {
 
 .navbar-custom {
   background-color: {{ site.navbar-col | default: "EAEAEA" }};
-  border-bottom: 1px solid {{ site.navbar-border-col | default: "DDDDDD" }};
+  box-shadow: 0 0 20px 20px {{ site.navbar-col }};
+
+  /* border-bottom: 1px solid {{ site.navbar-border-col | default: "DDDDDD" }}; */
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   {% if site.navbar-img %}
     background-image: url({{ site.navbar-img | relative_url }});
@@ -523,6 +526,7 @@ footer {
   border-top: 1px EAEAEA solid;
   margin-top: 3.125rem;
   font-size: 0.875rem;
+  box-shadow: 0 0 10px 10px {{ site.footer-col }};
   background-color: {{ site.footer-col | default: "EAEAEA" }};
   {% if site.footer-img %}
     background-image: url({{ site.footer-img | relative_url }});
