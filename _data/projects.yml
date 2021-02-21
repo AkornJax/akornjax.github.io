@@ -1,5 +1,6 @@
 Medieval RPS:
     background-image-url: /assets/img/bw.png
+    engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
     blog-page: "page path"
     youtube-key: FIla7YmwZHg
     images-folder: medievalrps
@@ -7,12 +8,11 @@ Medieval RPS:
     itchio-url: https://undeadknight11.itch.io/medievalrps
     project-blurb: Play Rock, Paper, Scissors against giant skeletons, defending your castle from its imminent demise.
     bullets:
-      - Modeled, textured, rigged, and animated hands to give the player a strong, unique character representation.
-      - Conceptualized, rigged, and animated 2D skeleton bosses to add character and movement to the screen.
-      - Created UE4 shaders for visually showing status effects present on players.
-      - I implemented the sound to enhance player feedback.
-      - I made drastic, tactful cuts to the scope to ensure that the project was a full experience by the deadline. 
-      - Engineered and tweaked all gameplay elements based off observations from player testing.
+        - Done 100% in Blueprints.
+        - Engineered and tweaked all gameplay elements based off observations from player testing.​
+        - Modeled, textured, rigged, and animated hands to give the player a strong, unique character representation.
+        - Conceptualized, rigged, and animated 2D skeleton bosses to add character and movement to the screen.
+        - Created UE4 shaders for visually showing status effects present on players.
     extra: |
       Created for the TAMU Game Studio Fall 2019. 
       Conceived during a game jam at the beginning of the semester with the prompt of “rock, paper, scissors” and decided to stick with the game idea and push it as far as possible. 
@@ -21,6 +21,7 @@ Medieval RPS:
 
 Panacea:
     background-image-url: /assets/img/panacea.png
+    engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
     youtube-key: 948EMzf3IWo
     images-folder: panacea
@@ -41,6 +42,7 @@ Panacea:
 
 Lucis Lemonade Stand:
     background-image-url: /assets/img/lls.png
+    engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
     youtube-key: Y_U_a9qxtlQ
     images-folder: lucis
@@ -48,19 +50,17 @@ Lucis Lemonade Stand:
     itchio-url: https://undeadknight11.itch.io/lucis-lemonade-stand
     project-blurb: Serve beverages to the denizens of this hellish suburbia.
     bullets:
-      - I coded and designed all aspects of the overworld to guide the player to their next encounter but allow for exploration.
-      - I designed all the pixel art animations designed to complement the gameplay and tell a story. (Goto)
-      - I designed and implemented the dialogue system to drive visual storytelling.
-      - I implemented the sound to enhance player feedback.
-      - ​I made drastic, tactful cuts to the scope to ensure that we had a full experience by the deadline. 
-      - Contributed to character and battle design.
+        - Lead programmer, revised and refactored the code from the other programmers.
+        - Lead designer, designed all aspects of the game and guided the art direction.
+        - Project manager, set up timelines and deadlines using codecks.io and made the call to cut content.
     extra: |
-      Worked with a team of three to make a turn-based RPG in the span of two weeks. 
-      The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
+      Worked in a team of seven over the duration of 10 weeks. 
+      Design decisions were focused on creating modular systems, emergent gameplay through physics-based interactions, and easily extendable gameplay.
     status: Finished, interested in recreating in Unreal Engine.
 
 Beleaguered Woods:
     background-image-url: /assets/img/bw.png
+    engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
     blog-page: "page path"
     youtube-key: I2E485B-INg
     images-folder: bwoods
@@ -72,7 +72,7 @@ Beleaguered Woods:
       - I designed all the pixel art animations designed to complement the gameplay and tell a story. (Goto)
       - I designed and implemented the dialogue system to drive visual storytelling.
       - I implemented the sound to enhance player feedback.
-      - ​I made drastic, tactful cuts to the scope to ensure that we had a full experience by the deadline. </li>
+      - ​I made drastic, tactful cuts to the scope to ensure that we had a full experience by the deadline. 
       - Contributed to character and battle design.
     extra: |
       Student project made in 14 weeks for TAMU Fall Game Studio 2020
@@ -80,6 +80,7 @@ Beleaguered Woods:
 
 A Knightly Sale:
     background-image-url: /assets/img/knightlySale.png
+    engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
     youtube-key: 
     images-folder: "folder"
@@ -91,6 +92,7 @@ A Knightly Sale:
 
 Control Loss:
     background-image-url: /assets/img/controlLoss.png
+    engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
     youtube-key: 
     images-folder: "folder"

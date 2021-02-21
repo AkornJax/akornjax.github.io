@@ -5,12 +5,13 @@ layout: null
 /** icons */
 .icon-background{
   position: absolute;
-  left: 0;
-  width: inherit;
-  height: inherit;
-  right: 0;
+  left: 10%;
+  width: 70%;
+  height: 70%;
+  right: 25%;
   z-index: -70;
   top: 25%;
+  opacity: 30%;
 }
 
 /** end icons */
@@ -159,13 +160,14 @@ html {
 }
 
 body {
+  background-image: linear-gradient( #0f0f0f, #00183f);
   font-family: 'Quicksand', 'Times New Roman', serif;
   font-size: 1.125rem;
   color: {{ site.text-col | default: "404040" }};
   position: relative;
   background-color: {{ site.page-col | default: "FFFFFF" }};
   {% if site.page-img %}
-  background-image: url({{ site.page-img | relative_url }});
+  /* background-image: url({{ site.page-img | relative_url }}); */
   background-attachment: fixed;
   {% endif %}
 }

@@ -1,0 +1,27 @@
+{% assign game = site.data.projects[include.name] %}
+
+<div class="col-lg-6 col-md-6 col-sm-12 col-12 column   fade-in-element ">
+<div>
+  <h1>{{include.name}}:</h1>    
+  <br>        
+    {% for item in game.bullets %}
+    <ul class="justify-left">
+      <li>
+        {{item | markdownify | remove: '<p>' | remove: '</p>'}}
+      </li>
+    </ul>
+    {% endfor %}
+      {{game.extra | markdownify}}
+      <div class="text-center">
+        <b><a  href="{{game.breakdown-url}}"> Goto project page </a></b>
+      </div>
+      <br>
+</div>
+{{game.engine}}
+</div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-12 column    embed-responsive embed-responsive-1by1">
+<iframe id="media-{{game.youtube-key}}" class="media embed-responsive-item"
+  src="https://www.youtube.com/embed/{{game.youtube-key}}?width=500=500" title="" width="500" height="500" style="    display: block;
+          margin: 0 auto; max-width: 600px; outline: none;" allow="encrypted-media; picture-in-picture"
+  frameborder="0"></iframe>
+</div>
