@@ -19,6 +19,7 @@ navbar-links:
   Art: "art"
   Incomplete:
   - VIZA656: "viza656home"
+  - 3DWorks: "3dart"
   Contact: "contact"
 
 # --- Logo --- #

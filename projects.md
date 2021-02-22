@@ -20,7 +20,7 @@ subtitle: Game Engineer | Game Designer | Technical Artist
     </div>
   </div>
   <div class="row">
-    <div class="grow col-lg-6 col-md-6 col-sm-12 col-12 column" onclick="location.href='panacea';" style="cursor: pointer; background-image: url('/assets/img/panacea.png');" >
+    <div class="grow col-lg-6 col-md-6 col-sm-12 col-12 column" onclick="location.href='panacea';" style="cursor: pointer; background-image: url('/assets/img/p-blur.png');" >
       <div class="project-text-container">
       <h2>Panacea</h2>
       <p>A turn-based RPG following three professionals as they traverse the virus-ridden island.
@@ -36,11 +36,11 @@ subtitle: Game Engineer | Game Designer | Technical Artist
  <div class="grow col-lg-3 col-md-3 col-sm-12 col-12 column" onclick="location.href='controlloss';" style="cursor: pointer; background-image: url('/assets/img/controlLoss.png');" >
    <div class="project-text-container">
       <h2>Control Loss</h2>
-      <p>Lose control to save yourself. A frightening journey lays ahead.</p>
+    <p>Lose control to save yourself. A frightening journey lays ahead.</p>
     </div>
   </div>
  <div class="row">
-    <div class="grow col-lg-6 col-md-6 col-sm-12 col-12 column" onclick="location.href='medievalrps';" style="cursor: pointer; background-image: url('/assets/img/medievalrps.png');" >
+    <div class="grow col-lg-6 col-md-6 col-sm-12 col-12 column" onclick="location.href='medievalrps';" style="cursor: pointer; background-image: url('/assets/img/background-blur.png');" >
       <div class="project-text-container ">
         <h2>Medieval RPS</h2>
         <p>Play Rock, Paper, Scissors against giant skeletons, defending your castle from its imminent demise.</p>

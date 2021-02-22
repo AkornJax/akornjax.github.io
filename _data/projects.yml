@@ -1,5 +1,5 @@
 Medieval RPS:
-    background-image-url: /assets/img/bw.png
+    background-image-url: /assets/img/background-blur.png
     engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
     blog-page: "page path"
     youtube-key: FIla7YmwZHg
@@ -20,7 +20,7 @@ Medieval RPS:
     status: Finished, but interested in recreating it.
 
 Panacea:
-    background-image-url: /assets/img/panacea.png
+    background-image-url: /assets/img/p-blur.png
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
     youtube-key: 948EMzf3IWo
