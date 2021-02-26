@@ -9,10 +9,10 @@ Medieval RPS:
     project-blurb: Play Rock, Paper, Scissors against giant skeletons, defending your castle from its imminent demise.
     bullets:
         - Done 100% in Blueprints.
-        - Engineered and tweaked all gameplay elements based off observations from player testing.​
-        - Modeled, textured, rigged, and animated hands to give the player a strong, unique character representation.
-        - Conceptualized, rigged, and animated 2D skeleton bosses to add character and movement to the screen.
-        - Created UE4 shaders for visually showing status effects present on players.
+        - All programming and implementation
+        - Modeled, textured, rigged, and animated player hands
+        - Conceptualized, rigged, and animated 2D skeleton bosses
+        - Created UE4 materials for displaying status effects
     extra: |
       Created for the TAMU Game Studio Fall 2019. 
       Conceived during a game jam at the beginning of the semester with the prompt of “rock, paper, scissors” and decided to stick with the game idea and push it as far as possible. 
@@ -29,12 +29,12 @@ Panacea:
     itchio-url: https://undeadknight11.itch.io/panacea
     project-blurb: A turn-based RPG following three professionals as they traverse the virus-ridden island.
     bullets:
-      - I coded and designed all aspects of the overworld to guide the player to their next encounter but allow for exploration.
-      - I designed all the pixel art animations designed to complement the gameplay and tell a story. 
-      - I designed and implemented the dialogue system to drive visual storytelling.
-      - I made drastic, tactful cuts to the scope to ensure that we had a full experience by the deadline. 
-      - Contributed to character and battle design.
-      - I implemented the sound to enhance player feedback.
+      - Coded and designed all the "overworld" 
+      - Designed all the pixel art and animations
+      - Designed and implemented the dialogue system 
+      - Made drastic, tactful cuts to the scope to ensure that we had a full experience by the deadline 
+      - Contributed to character and battle design
+      - Implemented the sound to enhance player feedback
     extra: |
       Worked with a team of three to make a turn-based RPG in the span of two weeks. 
       The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
@@ -50,9 +50,9 @@ Lucis Lemonade Stand:
     itchio-url: https://undeadknight11.itch.io/lucis-lemonade-stand
     project-blurb: Serve beverages to the denizens of this hellish suburbia.
     bullets:
-        - Lead programmer, revised and refactored the code from the other programmers.
-        - Lead designer, designed all aspects of the game and guided the art direction.
-        - Project manager, set up timelines and deadlines using codecks.io and made the call to cut content.
+        - Lead programmer, revised and refactored the code from the other programmers
+        - Lead designer, designed all aspects of the game and guided the art direction
+        - Project manager, set up timelines and deadlines using codecks.io and made the call to cut content
     extra: |
       Worked in a team of seven over the duration of 10 weeks. 
       Design decisions were focused on creating modular systems, emergent gameplay through physics-based interactions, and easily extendable gameplay.
@@ -68,14 +68,12 @@ Beleaguered Woods:
     itchio-url: https://undeadknight11.itch.io/beleagueredwoods
     project-blurb: Traverse the magical forest - fulfill your duty as the Seeker and return the ghosts to the fountain.
     bullets:
-      - I coded and designed all aspects of the overworld to guide the player to their next encounter but allow for exploration.
-      - I designed all the pixel art animations designed to complement the gameplay and tell a story. (Goto)
-      - I designed and implemented the dialogue system to drive visual storytelling.
-      - I implemented the sound to enhance player feedback.
-      - ​I made drastic, tactful cuts to the scope to ensure that we had a full experience by the deadline. 
-      - Contributed to character and battle design.
+      - Project Lead, formulated the mechanics 
+      - Lead programmer, programmed all systems
+      - Developed gameplay through layering mechanics
+      - Implemented all assets
     extra: |
-      Student project made in 14 weeks for TAMU Fall Game Studio 2020
+      Student project made in 14 weeks for TAMU Fall Game Studio 2020.
     status: Finished, but being converted to C++ for practice.
 
 A Knightly Sale:
@@ -102,3 +100,31 @@ Control Loss:
     bullets:
     extra:
     status:
+
+# Project Into The Breach:
+#     background-image-url: /assets/img/knightlySale.png
+#     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
+#     blog-page: "page path"
+#     youtube-key: 
+#     images-folder: "folder"
+#     breakdown-url: /projects/aknightlysale
+#     itchio-url:
+#     project-blurb:
+#     bullets:
+#       - Project Lead
+#       - Lead Programmer
+#     extra: |
+#       Being developed for the Texas Aggie Game Developers 2021 Spring Jam.
+    
+# Sanguine Dating Simulator:
+#     background-image-url: /assets/img/knightlySale.png
+#     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
+#     blog-page: "page path"
+#     youtube-key: 
+#     images-folder: "folder"
+#     breakdown-url: /projects/aknightlysale
+#     itchio-url:
+#     project-blurb:
+#     bullets:
+#       -Lead Programmer
+#     extra: |
