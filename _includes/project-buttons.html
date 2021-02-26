@@ -1,11 +1,43 @@
+
 <div class="container gap-3">
   <div class="row d-flex ">
-  {% for project in site.data.projects %}
-    <div class="grow col-lg-4 col-md-4 col-sm-4 col-4 column p-2 hidden d-flex justify-content-center"
+  {% for project in site.data.projects %} 
+
+  {% assign name = project[0] %}
+  {% assign game = site.data.projects[name] %}
+  {% assign priority = game.priority %}
+
+  {% case include.size %}
+    {% when "spread" %}
+      {% case priority %}
+        {% when 2 %}
+         {% assign size = 6 %}
+        {% when 1 %}
+          {% assign size = 4 %}
+        {% else %}
+          {% assign size = 2 %}
+      {% endcase %}
+    {% when "medium" %}
+        {% case priority %}
+          {% when 2 %}
+            {% assign size = 3 %}
+          {% when 1 %}
+            {% assign size = 2 %}
+          {% else %}
+            {% assign size = 1 %}
+       {% endcase %}
+    {% else %}
+          {% assign size = 1 %}
+  {% endcase %}
+
+    <div class="grow col-lg-{{size}} col-md-{{size}} col-sm-12 col-12 column p-2 hidden d-flex justify-content-center"
       onclick="location.href='{{project[1].breakdown-url}}';"
       style="cursor: pointer; background-image: url('{{project[1].background-image-url}}');">
       <div class="project-text-container ">
-        <h4>{{project[0]}}</h4>
+        <h4>{{name}}</h4>
+        {% if include.size == "spread" %}
+        <p>{{game.project-blurb}}</p>
+        {% endif %}
       </div>
     </div>
   {% endfor %}

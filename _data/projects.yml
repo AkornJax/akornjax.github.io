@@ -1,4 +1,5 @@
 Medieval RPS:
+    priority: 2
     background-image-url: /assets/img/background-blur.png
     engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
     blog-page: "page path"
@@ -20,6 +21,7 @@ Medieval RPS:
     status: Finished, but interested in recreating it.
 
 Panacea:
+    priority: 2
     background-image-url: /assets/img/p-blur.png
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
@@ -41,6 +43,7 @@ Panacea:
     status: Complete for now.
 
 Lucis Lemonade Stand:
+    priority: 2
     background-image-url: /assets/img/lls.png
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
@@ -59,6 +62,7 @@ Lucis Lemonade Stand:
     status: Finished, interested in recreating in Unreal Engine.
 
 Beleaguered Woods:
+    priority: 2
     background-image-url: /assets/img/bw.png
     engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
     blog-page: "page path"
@@ -77,6 +81,7 @@ Beleaguered Woods:
     status: Finished, but being converted to C++ for practice.
 
 A Knightly Sale:
+    priority: 1
     background-image-url: /assets/img/knightlySale.png
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
@@ -89,6 +94,7 @@ A Knightly Sale:
     extra: |
 
 Control Loss:
+    priority: 1
     background-image-url: /assets/img/controlLoss.png
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
