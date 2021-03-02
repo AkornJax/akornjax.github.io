@@ -10,8 +10,6 @@ var multiply = false;
 var overlay = false;
 var mousePosition = new Float32Array(3);
 
-
-// Image source: https://commons.wikimedia.org/wiki/File:Normal_map_example_-_Map.png
 var imgURL;
 
 var canvas, gl, program, image, resolutionLocation, mouseLocation, transparencyLoc, transparency;
