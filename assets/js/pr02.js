@@ -2,9 +2,6 @@
 
 /** Variables to be modified at runtime */
 var shiny = .5;
-var darkImageOpacity = 1;
-var lightImageOpacity = 1;
-var normalImageOpacity = 1;
 
 var lightIntensity = 1;
 var lightColor = new Float32Array(3);
@@ -17,9 +14,11 @@ var mousePosition = new Float32Array(3);
 // Image source: https://commons.wikimedia.org/wiki/File:Normal_map_example_-_Map.png
 var imgURL;
 
-var canvas, gl, program, image, resolutionLocation, mouseLocation, mousex, mousey, ifuseVectorFieldLocation, ifUseVectorField;
+var canvas, gl, program, image, resolutionLocation, mouseLocation, transparencyLoc, transparency;
+var  mousex, mousey = 0;
 var interpolateDistanceLoc, interpolateDistance;
-var indexOfRefractionLoc, indexOfRefraction = 1.0;
+var indexOfRefractionLoc;
+var indexOfRefraction = 1.0;
 
 var num_images;
 
@@ -27,86 +26,38 @@ var images_list;
 
 var current_index, total_images;
 
-function cartoonEffect() {
-  var sliderVal = document.getElementById("cartoonSlider").value;
-  var paramCartoon = parseInt(sliderVal);
+function cartoonEffect(newValue) {
+  var paramCartoon = parseInt(newValue);
   interpolateDistance = 0.5 - paramCartoon/100.0;
 }
 
-function changeIOR() {
-  var sliderVal = document.getElementById("iorSlider").value;
-  var paramIOR = (parseInt(sliderVal) - 100)/100;
+function changeIOR(newValue) {
+  var paramIOR = (parseInt(newValue) - 100)/100;
   indexOfRefraction = Math.pow(2, paramIOR);
-  // console.log(indexOfRefraction);
-  // console.log(paramIOR);
 }
 
-function seeNextImage() {
-  current_index = (current_index + 1) % images_list.length;
-  loadImages(images_list[current_index], render);
-}
-
-function toggleVectorField() {
-  if(ifUseVectorField < 5) {
-    ifUseVectorField = 10;
-  } else {
-    ifUseVectorField = 0;
-  }
-}
-
-function urlInputByUser() {
-  var bright_url = document.getElementById("bright_url").value;
-  var dark_url = document.getElementById("dark_url").value;
-  var normal_map_url = document.getElementById("normal_map_url").value;
-
-  // document.getElementById("imageInformation").innerHTML = bright_url + dark_url + normal_map_url;
-
-  var images = {'bright' : { url : bright_url},
-               'dark' : { url : dark_url},
-                'normal_map' : { url : normal_map_url}
-              };
-  images_list.push(images);
-  console.log("Urls : " + images['bright'].url + "<br>" + dark_url + "<br>" + normal_map_url);
-
-  loadImages(images, render);
-}
 
 function main() {
-  var dark = "/assets/img/project01Images/cara-dark.png";
-  var light = "/assets/img/project01Images/cara-light.png";
-  var normal = "/assets/img/project01Images/cara-normal.png";
-  
-  var bright_url = 'https://raw.githubusercontent.com/h44rd/NormalMaps/master/Homer/background.png';;
-  var dark_url = 'https://raw.githubusercontent.com/h44rd/NormalMaps/master/Homer/foreground.png';
-  images_list = [{'bright' : {url : 'https://raw.githubusercontent.com/h44rd/NormalMaps/master/Homer/background.png', Image : null},
-                    'dark' : {url : 'https://raw.githubusercontent.com/h44rd/NormalMaps/master/Homer/foreground.png', Image : null},
-                    'normal_map' : {url : 'https://www.kornosky.site/assets/img/project01Images/cara-normal.png', Image : null}
+  images_list = [{'bright' : {url : '/assets/img/testbackground.png', Image : null},
+                    'dark' : {url : '/assets/img/foreground.png', Image : null},
+                    'normal_map' : {url : '/assets/img/project01Images/cara-normal.png', Image : null},
+                    'haha_color' : {url : '/assets/img/cara-cutout.png', Image : null}
                   }];
-
-  images_list.push({'dark' : {url : dark_url, Image : null},
-              'bright' : {url : bright_url, Image : null},
-              'normal_map' : {url : 'https://raw.githubusercontent.com/h44rd/NormalMaps/master/Shapes/normalmap.png', Image : null}
-              });
-  
-  images_list.push({'dark' : {url : dark_url, Image : null},
-              'bright' : {url : bright_url, Image : null},
-              'normal_map' : {url : 'https://raw.githubusercontent.com/h44rd/NormalMaps/master/Shapes/Shape1/nomal.png', Image : null}
-              });
-
-  images_list.push({'dark' : {url : dark_url, Image : null},
-              'bright' : {url : bright_url, Image : null},
-              'normal_map' : {url : 'https://raw.githubusercontent.com/h44rd/NormalMaps/master/Shapes/Shape2/nomal.png', Image : null}
-              });
   current_index = 0;
-  ifUseVectorField = 0;
   interpolateDistance = 0.2;
+  mousex = 5;
+  mousey = 5;
+  //Init effects
+  cartoonEffect(document.getElementById("fresnelSlider").value);
+  changeIOR(document.getElementById("iorSlider").value);
+  transparency = 0;
   loadImages(images_list[0], render);
 }
 
 function loadImage(url, callback) {
   console.log(url);
   var image = new Image();
-  requestCORSIfNotSameOrigin(image, url)
+  image.crossOrigin = "anonymous";
   image.src = url;
   image.onload = callback;
   return image;
@@ -115,7 +66,7 @@ function loadImage(url, callback) {
 function loadImages(m_images, callback) {
   // var images = [];
   var imagesToLoad = Object.keys(m_images).length;
- 
+
   // Called each time an image finished loading.
   var onImageLoad = function() {
     --imagesToLoad;
@@ -124,7 +75,7 @@ function loadImages(m_images, callback) {
       callback(m_images);
     }
   };
- 
+
   for (var image_i in m_images) {
     var image = loadImage(m_images[image_i].url, onImageLoad);
     m_images[image_i].Image = image;
@@ -138,7 +89,7 @@ function render(images) {
   /** @type {HTMLCanvasElement} */
 
   canvas = document.getElementById("canvas");
-  gl = canvas.getContext("webgl");
+  gl = canvas.getContext("webgl2");
   if (!gl) {
     return;
   }
@@ -159,7 +110,7 @@ function render(images) {
 
   webglUtils.resizeCanvasToDisplaySize(gl.canvas);
 
-  var image = images['bright'].Image;
+  var image = images['normal_map'].Image;
 
   var rectangleHeight = gl.canvas.height;
   var rectangleWidth = (image.width/image.height) * gl.canvas.height;
@@ -183,30 +134,28 @@ function render(images) {
 
   // ------------------------------------------------------------------------------------- //
 
-  var texturesNum = Object.keys(images).length;
   for (var key in images) {
     var texture = gl.createTexture();
+    
+    //Declare new space for texture
     gl.bindTexture(gl.TEXTURE_2D, texture);
 
-    if(key == 'normal_map') {
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);  
+    // Upload the image into the texture.
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, images[key].Image);
+    if(key == 'normal_map' || key == 'haha_color') {
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_BORDER);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_BORDER);
+   
     }  else {
-      // Set the parameters so we can render any size image.
-      gl.generateMipmap(gl.TEXTURE_2D);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.MIRRORED_REPEAT);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.MIRRORED_REPEAT);
     }
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 
-    // Upload the image into the texture.
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, images[key].Image);
-
     // add the texture to the array of textures.
     images[key].Texture = texture;
   }
-
 
   for(var key in images) {
     images[key].UniformLoc = gl.getUniformLocation(program, "u_" + key);
@@ -214,31 +163,11 @@ function render(images) {
 
   // ------------------------------------------------------------------------------------- //
 
-  // // Create a texture.
-  // var texture = gl.createTexture();
-  // gl.bindTexture(gl.TEXTURE_2D, texture);
-
-  // // Set the parameters so we can render any size image.
-  // gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-  // gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-  // gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
-  // gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
-
-  // // Upload the image into the texture.
-  // gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
-
-  // lookup uniforms
   resolutionLocation = gl.getUniformLocation(program, "u_resolution");
-
-  // lookup mouse 
   mouseLocation = gl.getUniformLocation(program, "u_mouse");
-
-  // lookup ifUseVectorField
-  ifuseVectorFieldLocation = gl.getUniformLocation(program, "u_ifUseVectorField");
-
   interpolateDistanceLoc = gl.getUniformLocation(program, "u_interpolateDistance");
-
   indexOfRefractionLoc = gl.getUniformLocation(program, "u_index_of_refraction");
+  transparencyLoc = gl.getUniformLocation(program, "u_transparency");
 
   // Tell WebGL how to convert from clip space to pixels
   gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
@@ -290,7 +219,7 @@ function render(images) {
   for(var key in images) {
     gl.activeTexture(gl.TEXTURE0 + i);
     gl.bindTexture(gl.TEXTURE_2D, images[key].Texture);
-    i++;  
+    i++;
   }
   //----------------------------------------------------------------------------------- //
 
@@ -303,9 +232,9 @@ function animateScene() {
 
   gl.uniform2f(mouseLocation, mousex * 1.0 / gl.canvas.width, mousey * 1.0 / gl.canvas.height);
 
-  gl.uniform1i(ifuseVectorFieldLocation, ifUseVectorField);
-
   gl.uniform1f(interpolateDistanceLoc, interpolateDistance);
+
+  gl.uniform1f(transparencyLoc, transparency);
 
   gl.uniform1f(indexOfRefractionLoc, indexOfRefraction);
 
@@ -335,19 +264,10 @@ function setRectangle(gl, x, y, width, height) {
 
 main();
 
-function requestCORSIfNotSameOrigin(img, url) {
-  if ((new URL(url)).origin !== window.location.origin) {
-    img.crossOrigin = "";
-  }
-}
-
 function updateMouse(e) {
   mousex = e.clientX;
   mousey = e.clientY;
 
   mousex = (mousex - gl.canvas.width/2);
   mousey = -1.0 * (mousey - gl.canvas.height/2);
-  var coor = "Coordinates: (" + mousex + "," + mousey + ")";
-  document.getElementById("demo").innerHTML = coor;
 }
-

@@ -42,7 +42,7 @@ subtitle: Game Engineer | Game Designer | Technical Artist
 <div class="row resume-container">
   <div style="width: 820px;margin-left: auto ;margin-right: auto ;">
     <iframe
-      src="https://docs.google.com/viewer?url=http://kornosky.github.io/assets/img/ChristopherKornoskyResume2020.pdf&embedded=true"
+      src="https://docs.google.com/viewer?url=http://kornosky.github.io/assets/img/ChristopherKornoskyResume2021.pdf&embedded=true"
       scrolling="auto" height="1100px" width="850px" margin-left="auto" margin-right="auto"></iframe>
   </div>
 </div>

@@ -57,10 +57,10 @@ function loadImages(urls, callback) {
   }
 }
 
-function init(imgs) 
+function init(imgs)
 {
   images = imgs;
-  
+
   // Tell it to use our program (pair of shaders)
   gl.useProgram(program);
 
@@ -92,7 +92,7 @@ function init(imgs)
   gl.uniform1i(u_imageDarkLocation, 0);  // texture unit 0
   gl.uniform1i(u_imageLightLocation, 1);  // texture unit 1
   gl.uniform1i(u_imageNormalLocation, 2);  // texture unit 1
-  
+
   /**Things that need to be done to redraw */
   update();
 
@@ -121,11 +121,11 @@ function getNoPaddingNoBorderCanvasRelativeMousePosition(event, target) {
   pos.x = pos.x * target.width  / target.clientWidth;
   pos.y = pos.y * target.height / target.clientHeight;
 
-  return pos;  
+  return pos;
 }
 
 function update()
-{   
+{
     // Compute the matrix
     var aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
     var zNear = 1;
@@ -152,7 +152,7 @@ function update()
   gl.getUniformLocation(program, "u_lightWorldPosition");
   var worldLocation =
   gl.getUniformLocation(program, "u_world");
-  
+
   console.log( mousePosition);
   // set the light position
   gl.uniform3fv(lightWorldPositionLocation, mousePosition);
@@ -160,17 +160,17 @@ function update()
     gl.uniformMatrix4fv(
       worldLocation, false,
       worldMatrix);
-      
+
 
   //set variables in shaderes
   gl.uniform1f(darkOpacity_Loc, darkImageOpacity);
   gl.uniform1f(lightOpacity_Loc, lightImageOpacity);
   gl.uniform1f(normalOpacity_Loc, normalImageOpacity);
  // console.log(mousePosition);
-  gl.uniform3fv(u_lightPosition_Loc, mousePosition);    
-  gl.uniform1f(u_lightIntensity_Loc, lightIntensity);    
+  gl.uniform3fv(u_lightPosition_Loc, mousePosition);
+  gl.uniform1f(u_lightIntensity_Loc, lightIntensity);
   gl.uniform3fv(u_lightColor_Loc, lightColor);    //need to make color slider
-  
+
   // look up where the vertex data needs to go.
   var positionLocation = gl.getAttribLocation(program, "a_position");
   var texcoordLocation = gl.getAttribLocation(program, "a_texCoord");
@@ -180,7 +180,7 @@ function update()
 
   // Bind it to ARRAY_BUFFER (think of it as ARRAY_BUFFER = positionBuffer)
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-  
+
   // Set a rectangle the same size as the image. (When image is loaded)
   if(images == null)
     return
@@ -289,7 +289,7 @@ function main() {
 
   updateNow();
   }
- 
+
 
 
 main();
