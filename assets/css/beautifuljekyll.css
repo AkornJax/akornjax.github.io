@@ -369,7 +369,7 @@ img {
     padding-bottom: 1.25rem;
   }
 
-  .navbar-custom .navbar-brand-logo {
+  .navbar-custom .navbar-brand-logo {   
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -431,6 +431,8 @@ img {
 
 @media (max-width: 1199px) {
   .navbar-custom .navbar-collapse {
+    background-color: #003d72;
+
     border-top: 1px solid {{ site.navbar-border-col | default: "DDDDDD" }};
     margin: 0 -1rem;
   }
@@ -520,7 +522,6 @@ img {
 }
 
 /* --- Footer --- */
-
 footer {
   padding: 1.875rem 0;
   border-top: 1px EAEAEA solid;
