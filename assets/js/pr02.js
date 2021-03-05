@@ -34,7 +34,7 @@ function changeIOR(newValue) {
   indexOfRefraction = Math.pow(2, paramIOR);
 }
 
-
+//ummm
 function main() {
   images_list = [{'bright' : {url : '/assets/img/testbackground.png', Image : null},
                     'dark' : {url : '/assets/img/foreground.png', Image : null},
