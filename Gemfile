@@ -7,6 +7,7 @@ gemspec
 gem 'tzinfo-data'
 
   gem 'jekyll-analytics'
+  gem 'jekyll-admin', group: :jekyll_plugins
 
   gem 'jekyll-spaceship'
   gem 'jekyll-imagemagick', '~> 1.4'
