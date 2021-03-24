@@ -197,7 +197,7 @@ h1, h2, h3, h4 {
   margin-top: 1.25rem;
 }
 a {
-  color: {{ site.link-col | default: "008AFF" }};
+  color: {{ site.link-col | default: "008AFF" }} !important;
 }
 a:hover,
 a:focus {
@@ -997,7 +997,7 @@ table tr td :last-child {
 
 code {
   padding: 0.125rem 0.25rem;
-  color: c7254e;
+  color: #e83e8c !important;
   background-color: f9f2f4;
   border-radius: 0.25rem;
 }

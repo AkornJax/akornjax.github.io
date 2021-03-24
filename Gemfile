@@ -7,8 +7,10 @@ gemspec
 gem 'tzinfo-data'
 
   gem 'jekyll-analytics'
-  gem 'jekyll-admin', group: :jekyll_plugins
-
+  gem 'sinatra', '~> 1.4'
+  gem 'sinatra-contrib', '~> 1.4'
+  gem 'jekyll-admin', '~> 0.10.0', group: :jekyll_plugins
+  
   gem 'jekyll-spaceship'
   gem 'jekyll-imagemagick', '~> 1.4'
 

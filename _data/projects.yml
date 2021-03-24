@@ -77,7 +77,8 @@ Beleaguered Woods:
       - Developed gameplay through layering mechanics
       - Implemented all assets
     extra: |
-      Student project made in 14 weeks for TAMU Fall Game Studio 2020.
+      Student project made in 14 weeks for TAMU Fall Game Studio 2020. <br><br>
+      Originally started in Amazon Lumberyard and was being designed as a multiplayer party game, drastic changes were made 3-4 weeks into development due to the learning curve of Lumberyard and general scope issues.
     status: Finished, but being converted to C++ for practice.
 
 A Knightly Sale:

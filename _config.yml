@@ -16,6 +16,7 @@ navbar-links:
   Projects: "projects"
   Portfolio:
   - Game Development: "gamedevelopment-portfolio"  
+  - Code Samples: "code-samples"
   Art: "art"
   Incomplete:
   - VIZA656: "viza656home"
@@ -66,6 +67,10 @@ social-network-links:
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
 #rss-description: This website is a virtual proof that I'm awesome
+# Jekyll Admin #
+jekyll-admin:
+  show_drafts: true
+
 
 # --- General options --- #
 #add collections to be able to iterate over folders, you can make a directory for collections but look at documentation first https://jekyllrb.com/docs/collections/
