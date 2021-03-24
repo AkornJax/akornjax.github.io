@@ -1,7 +1,8 @@
 ---
-title: Raycaster Simplified
+title: Raycaster Simplified - C++
 ---
-
+> [!WARNING]
+> This article is heavily WIP
 My goal with this article is to abstract the concepts of a raycaster away from the noisy mathamatics that drive the implementation. Taking a step back and learning the ideas will give us the ability to easily apply these concepts to future works. 
 ## The Basics
 A raycaster begins with the ray, which is a line that only has a **starting point** and a **direction**.
