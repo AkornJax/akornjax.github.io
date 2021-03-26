@@ -12,16 +12,6 @@ title: Chris Kornosky
 url: www.kornosky.site 
 description: Gameplay Programmer | Tech Artist
 
-defaults:
-  - 
-    author: Christopher Kornosky
-    title: Chris Kornosky
-    url: www.kornosky.site 
-    description: Gameplay Programmer | Tech Artist
-    scope:
-    path: ""
-    values:
-    image: /assets/img/p-blur.png
 # --- List of links in the navigation bar --- #
 
 navbar-links:
