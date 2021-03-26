@@ -1,5 +1,5 @@
 ---
-title: Intro To Gameplay Mathematics
+title: Intro To Gameplay Mathematics - C++
 ---
 
 Hello! 

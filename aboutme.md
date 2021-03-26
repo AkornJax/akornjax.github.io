@@ -21,7 +21,8 @@ subtitle: Game Engineer | Game Designer | Technical Artist
           <li>TAMU MS in Visualization - Expected 2023</li>
           <li>TAMU BS in Visualization</li>
           <li>TAMU Minor in Computer Science</li>
-          <li>TAMU Live Lab - VFX Artist</li>
+          <li>TAMU Live Lab - Tech/VFX Artist</li>
+          <li>Rotary International Animation Project - Tech/VFX Artist</li>
         </ul>
       </div>
     </div>
@@ -31,7 +32,7 @@ subtitle: Game Engineer | Game Designer | Technical Artist
         <br>
         <ul class="justify-left">
           <li>Second place LIVE LAB 2020 Game Jam Winner (<a href="/projects/panacea">Panacea</a>)</li>
-          <li>Winner of Unreal Engine Education Award</li>
+          <li>Winner of Unreal Engine Online Education Challenge</li>
         </ul>
       </div>
     </div>
