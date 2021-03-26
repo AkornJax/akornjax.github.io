@@ -1,5 +1,6 @@
 ---
 title: Intro To Gameplay Mathematics - C++
+header-img: "/assets/img/p-blur.png"
 ---
 
 Hello! 
