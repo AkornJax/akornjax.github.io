@@ -12,7 +12,7 @@ author: Christopher Kornosky
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
+  About Me / Resume: "aboutme"
   Projects: "projects"
   Portfolio:
   - Game Development: "gamedevelopment-portfolio"  
