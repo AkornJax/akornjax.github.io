@@ -242,6 +242,9 @@ plugins:
   - jekyll-seo-tag
 
 defaults:
+  title: "Chris Kornosky"
+  url: www.kornosky.site 
+  description: My portfolio site. Gameplay Programmer | Tech Artist
   - scope:
       path: ""
     values:
