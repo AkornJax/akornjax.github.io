@@ -5,23 +5,10 @@
 # --- Required options --- #
 # Name of website
 title: Kornosky
-url: www.kornosky.site
+url: "https://www.kornosky.site/"
 # Your name to show in the footer
 author: Christopher Kornosky
-title: Chris Kornosky
-url: www.kornosky.site 
-description: Gameplay Programmer | Tech Artist
 
-defaults:
-  - 
-    author: Christopher Kornosky
-    title: Chris Kornosky
-    url: www.kornosky.site 
-    description: Gameplay Programmer | Tech Artist
-    scope:
-    path: ""
-    values:
-    image: /assets/img/p-blur.png
 # --- List of links in the navigation bar --- #
 
 navbar-links:
@@ -252,7 +239,7 @@ plugins:
   - jekyll-analytics
   - jekyll-spaceship
   - jekyll-imagemagick
-  - jekyll-seo-tag
+
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
