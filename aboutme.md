@@ -21,8 +21,8 @@ subtitle: Game Engineer | Game Designer | Technical Artist
           <li>TAMU MS in Visualization - Expected 2023</li>
           <li>TAMU BS in Visualization</li>
           <li>TAMU Minor in Computer Science</li>
-          <li>TAMU Live Lab - Tech/VFX Artist</li>
-          <li>Rotary International Animation Project - Tech/VFX Artist</li>
+          <li>Rotary International Animation Project - Unreal Engine Developer</li>
+          <li>TAMU LIVE Lab - Tech/VFX Artist</li>          
         </ul>
       </div>
     </div>
