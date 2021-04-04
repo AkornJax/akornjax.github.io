@@ -161,7 +161,8 @@ html {
 }
 
 body {
-  background-image: linear-gradient( #0f0f0f, #00183f);
+  background-image: linear-gradient(to bottom, #0f0f0f, #26272970),
+  url(/assets/img/webb-dark.png);
   font-family: 'Quicksand', 'Times New Roman', serif;
   font-size: 1.125rem;
   color: {{ site.text-col | default: "404040" }};

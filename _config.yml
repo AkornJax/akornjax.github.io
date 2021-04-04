@@ -106,16 +106,16 @@ feed_show_tags: true
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 # https://www.schemecolor.com/blue-green-dragonfly.php
-navbar-col: "#003d727d"
+navbar-col: "#00182d"
 navbar-text-col: "#00000"
-navbar-border-col: "#025D6F"
+navbar-border-col: "#1EB373"
 page-col: "#00060F"
 text-col: "#ffffff"
-link-col: "#6ABA63"
+link-col: "#1EB373"
 hover-col: "#1EB373"
 footer-col: "#003d725c"
 footer-text-col: "#777777"
-footer-link-col: "#6ABA63"
+footer-link-col: "#1EB373"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
