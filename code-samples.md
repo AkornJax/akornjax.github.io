@@ -3,8 +3,12 @@ layout: default
 title: Code Samples
 subtitle: 
 ---
+### Outline
+- [Outline](#outline)
+- [GridManager.cs](#gridmanagercs)
 
-### GridManager.cs -> Singleton, Runtime Set
+### GridManager.cs
+
 A singleton class that is designed from the ground-up to inform all `Unit` entities of their locations as well as solve hefty algorithms using simple int array representations. Utilizes generics where possible to create more robust and applicable code.
 ``` 
 public class GridManager : SingletonDDOL<GridGraph>

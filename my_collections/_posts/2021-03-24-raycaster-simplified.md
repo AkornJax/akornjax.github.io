@@ -5,6 +5,23 @@ title: Raycaster Simplified - C++
 > This article is heavily WIP
 
 My goal with this article is to abstract the concepts of a raycaster away from the noisy mathamatics that drive the implementation. Taking a step back and learning the ideas will give us the ability to easily apply these concepts to future works. Any examples of implementation will be C++ focused and peripherials such as window creation are ignored, as I simply utilized basic OpenGL for those portions. 
+- [The Basics](#the-basics)
+  - [Raycaster Structure](#raycaster-structure)
+  - [Ray](#ray)
+  - [Camera](#camera)
+- [Creating Primatives](#creating-primatives)
+  - [Sphere](#sphere)
+  - [Plane](#plane)
+- [Lights](#lights)
+  - [Point](#point)
+  - [Spot](#spot)
+  - [Area](#area)
+- [Shadows](#shadows)
+  - [Avoiding Self-Shadowing](#avoiding-self-shadowing)
+- [Transformations](#transformations)
+- [Texture Mapping](#texture-mapping)
+  - [The Basic Idea](#the-basic-idea)
+
 ## The Basics
 ### Raycaster Structure
 This will be a template for your raycaster to follow. Simply use it as a suggestion or a frame of reference when reading the article!
@@ -19,6 +36,7 @@ This will be a template for your raycaster to follow. Simply use it as a suggest
     -Area.h
     -Point.h
     -Spot.h
+-Material.h
 ```
 ### Ray
 A raycaster begins with the ray, which is a line that only has a **starting point** and a **direction**. The primary rays that we will be shooting from our camera will be in charge of detecting intersections within our virtual world and subsequently returning a pixel color.
@@ -43,3 +61,26 @@ You may notice some weird "freckling", this is caused by that previously mention
 ## Transformations
 Matricies! Inverting them is unintutive but quickly reverts them. For a transformation matrix M which transforms some vector a to position v, then to get a matrix which transforms some vector v to a we just multiply by M−1
 Rodriguez's Formula
+
+## Texture Mapping
+### The Basic Idea
+Take the hit point `P_h` then using a mapping equation, unique to the primitive that has been hit, you solve to find the `u` and `v` of the **texture coordinates**. These values have a max of `1` and a min of `0`. They are then converted to **image coordinates** by multiplying the **texture coordinates** by the texture image size. 
+```
+float X = u * X_max;
+float Y = v * Y_max
+```
+We then compute the pixel of the `X,Y` **image coordinates** by simply converting it from a `float` to an `integer`.
+```
+I = (int) X;
+J = (int) Y;
+```
+Then, we compute the position of the point within the pixel `I,J`:
+```
+i = X - I;
+j = Y - J;
+```
+Then lastly, we compute the final color by using **billinear interpolation**:
+```
+C = C_IJ (1−i)(1−j) + C_I1_J i(1−j) + C_I1_J1(i)(j) + C_I_J1 (1−i)(j)
+```
+You may be wondering, well how do I get the colors `C_IJ`, `C_I1_J`, `C_I1_J1`, and `C_I_J1`? These are the pixel colors that are found when looking at pixel `I,J`, `I+1,J`, `I+1,J+1`, and `I,J+1`. So we're sampling the nearby pixels, then combining them based off the weighted values `i,j` that represent the position of the point within the pixel.
