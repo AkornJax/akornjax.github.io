@@ -1,3 +1,42 @@
+Lucis Lemonade Stand:
+    priority: 2
+    background-image-url: /assets/img/lls.png
+    engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
+    blog-page: "page path"
+    youtube-key: Y_U_a9qxtlQ
+    images-folder: lucis
+    breakdown-url: /projects/lucis
+    itchio-url: https://undeadknight11.itch.io/lucis-lemonade-stand
+    project-blurb: Serve beverages to the denizens of this hellish suburbia.
+    bullets:
+        - Lead programmer, revised and refactored the code from the other programmers
+        - Lead designer, designed all aspects of the game and guided the art direction
+        - Project manager, set up timelines and deadlines using codecks.io and made the call to cut content
+    extra: |
+      Worked in a team of 7 over the duration of 10 weeks for TAMU Summer Game Studio 2020
+      Design decisions were focused on creating modular systems, emergent gameplay through physics-based interactions, and easily extendable gameplay.
+    status: Finished, interested in recreating in Unreal Engine.
+
+Beleaguered Woods:
+    priority: 2
+    background-image-url: /assets/img/bw.png
+    engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
+    blog-page: "page path"
+    youtube-key: I2E485B-INg
+    images-folder: bwoods
+    breakdown-url: /projects/beleagueredwoods
+    itchio-url: https://undeadknight11.itch.io/beleagueredwoods
+    project-blurb: Traverse the magical forest - fulfill your duty as the Seeker and return the ghosts to the fountain.
+    bullets:
+      - Project Lead, formulated the mechanics 
+      - Lead programmer, programmed all systems
+      - Developed gameplay through layering mechanics
+      - Implemented all assets
+    extra: |
+      Student project made in 14 weeks for TAMU Fall Game Studio 2020. <br><br>
+      Originally started in Amazon Lumberyard and was being designed as a multiplayer party game, drastic changes were made 3-4 weeks into development due to the learning curve of Lumberyard and general scope issues.
+    status: Finished, but being converted to C++ for practice.
+
 Medieval RPS:
     priority: 2
     background-image-url: /assets/img/background-blur.png
@@ -41,45 +80,6 @@ Panacea:
       Worked with a team of three to make a turn-based RPG in the span of two weeks. 
       The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
     status: Complete for now.
-
-Lucis Lemonade Stand:
-    priority: 2
-    background-image-url: /assets/img/lls.png
-    engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
-    blog-page: "page path"
-    youtube-key: Y_U_a9qxtlQ
-    images-folder: lucis
-    breakdown-url: /projects/lucis
-    itchio-url: https://undeadknight11.itch.io/lucis-lemonade-stand
-    project-blurb: Serve beverages to the denizens of this hellish suburbia.
-    bullets:
-        - Lead programmer, revised and refactored the code from the other programmers
-        - Lead designer, designed all aspects of the game and guided the art direction
-        - Project manager, set up timelines and deadlines using codecks.io and made the call to cut content
-    extra: |
-      Worked in a team of 7 over the duration of 10 weeks for TAMU Summer Game Studio 2020
-      Design decisions were focused on creating modular systems, emergent gameplay through physics-based interactions, and easily extendable gameplay.
-    status: Finished, interested in recreating in Unreal Engine.
-
-Beleaguered Woods:
-    priority: 2
-    background-image-url: /assets/img/bw.png
-    engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
-    blog-page: "page path"
-    youtube-key: I2E485B-INg
-    images-folder: bwoods
-    breakdown-url: /projects/beleagueredwoods
-    itchio-url: https://undeadknight11.itch.io/beleagueredwoods
-    project-blurb: Traverse the magical forest - fulfill your duty as the Seeker and return the ghosts to the fountain.
-    bullets:
-      - Project Lead, formulated the mechanics 
-      - Lead programmer, programmed all systems
-      - Developed gameplay through layering mechanics
-      - Implemented all assets
-    extra: |
-      Student project made in 14 weeks for TAMU Fall Game Studio 2020. <br><br>
-      Originally started in Amazon Lumberyard and was being designed as a multiplayer party game, drastic changes were made 3-4 weeks into development due to the learning curve of Lumberyard and general scope issues.
-    status: Finished, but being converted to C++ for practice.
 
 A Knightly Sale:
     priority: 1

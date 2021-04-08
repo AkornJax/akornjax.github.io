@@ -21,6 +21,7 @@ My goal with this article is to abstract the concepts of a raycaster away from t
 - [Transformations](#transformations)
 - [Texture Mapping](#texture-mapping)
   - [The Basic Idea](#the-basic-idea)
+- [Triangle Meshes](#triangle-meshes)
 
 ## The Basics
 ### Raycaster Structure
@@ -84,3 +85,6 @@ Then lastly, we compute the final color by using **billinear interpolation**:
 C = C_IJ (1−i)(1−j) + C_I1_J i(1−j) + C_I1_J1(i)(j) + C_I_J1 (1−i)(j)
 ```
 You may be wondering, well how do I get the colors `C_IJ`, `C_I1_J`, `C_I1_J1`, and `C_I_J1`? These are the pixel colors that are found when looking at pixel `I,J`, `I+1,J`, `I+1,J+1`, and `I,J+1`. So we're sampling the nearby pixels, then combining them based off the weighted values `i,j` that represent the position of the point within the pixel.
+
+## Triangle Meshes
+Triangles are how we're going to start including the REALLY cool shapes into our raytracer. Since we're going to eventually have over 9000 triangles in our scene, we might as well go ahead and make a class to easy manage all the information, just like we've done with `Ray.h`, we'll make `Triangle.h`. This class will simply store the three locations of its corners and provide us with easy access to its normal property with `glm::vec3 LocalNormalAt(){};`.
