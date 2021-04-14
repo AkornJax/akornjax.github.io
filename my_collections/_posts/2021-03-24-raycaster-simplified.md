@@ -4,9 +4,11 @@ title: Raycaster Simplified - C++
 > [!WARNING]
 > This article is heavily WIP
 
+> [!NOTE]
+> Will eventually use http://sangsoonam.github.io/2019/01/20/syntax-highlighting-in-jekyll.html to color code
 My goal with this article is to abstract the concepts of a raycaster away from the noisy mathamatics that drive the implementation. Taking a step back and learning the ideas will give us the ability to easily apply these concepts to future works. Any examples of implementation will be C++ focused and peripherials such as window creation are ignored, as I simply utilized basic OpenGL for those portions. 
 - [The Basics](#the-basics)
-  - [Raycaster Structure](#raycaster-structure)
+- [Raycaster Structure](#raycaster-structure)
   - [Ray](#ray)
   - [Camera](#camera)
 - [Creating Primatives](#creating-primatives)
@@ -63,8 +65,35 @@ You may notice some weird "freckling", this is caused by that previously mention
 Matricies! Inverting them is unintutive but quickly reverts them. For a transformation matrix M which transforms some vector a to position v, then to get a matrix which transforms some vector v to a we just multiply by M−1
 Rodriguez's Formula
 
+# Materials
+## Reflection
+Reflection is simple to implement, with everything else set up correctly. The idea with reflection is that we're going to recursively iterate through Rays, starting with our initial ray, coming from the `image plane`, then continuing with `Ray(hit_position, reflected_direction)`. We definitely need to watch our for an infinite loop, so make sure you can control the amount of `steps` for the raytrace to go. Ultimately, we're using all the same framework just casting new rays from the recursively discovered locations then simply adding the new result to our `final_color`. Here is how your code to integrate reflections would possibly look:
+```cpp
+for(int i = 0, i < steps, i++){
+  //check if ray hits
+  Intersection intersection_info; //Intersected obj, intersect distance, etc...
+  bool hit = CheckForIntersection(incoming_ray, intersection_info);
+  if(hit){
+    final_color += GetColorAtPoint(intersection_info)
+    if(intersection_info.GetShape().GetMaterial().IsReflective()){
+      //Calculate reflection direction
+      ray_direction = -current_ray.GetDirection();
+      reflection_direction = -ray_direction + 2.0f * dot(ray_direction, normal) * normal;
+      //Change the incoming_ray to the newly reflected ray and continue
+      incoming_ray = Ray(intersection_info.GetHitPoint(), reflection_direction)
+    }
+    else{
+      //We can end our recursive stepping by breaking out of the loop
+      break;
+    }
+  }
+  else{
+    final_color = background_color;
+  }
+}
+```
+## Refraction
 ## Texture Mapping
-### The Basic Idea
 Take the hit point `P_h` then using a mapping equation, unique to the primitive that has been hit, you solve to find the `u` and `v` of the **texture coordinates**. These values have a max of `1` and a min of `0`. They are then converted to **image coordinates** by multiplying the **texture coordinates** by the texture image size. 
 ```
 float X = u * X_max;
