@@ -117,3 +117,17 @@ You may be wondering, well how do I get the colors `C_IJ`, `C_I1_J`, `C_I1_J1`, 
 
 ## Triangle Meshes
 Triangles are how we're going to start including the REALLY cool shapes into our raytracer. Since we're going to eventually have over 9000 triangles in our scene, we might as well go ahead and make a class to easy manage all the information, just like we've done with `Ray.h`, we'll make `Triangle.h`. This class will simply store the three locations of its corners and provide us with easy access to its normal property with `glm::vec3 LocalNormalAt(){};`.
+
+## Distributed Raytracer
+### Aliasing
+Because we are simply sending out a single ray from the center of each pixel, we don't have beautiful, smooth edges. This effect of jagged pixels is called **aliasing**. Sampling "the shape" higher than the **Nyquist frequency** allows us to avoid aliasing. The **Nyquist frequency** is a characteristic of a sampler (our raycaster which *samples* pixels) that converts a continuous function/signal into a discrete (enumerable) sequence. Because we have a high frequency of data, we'll need to sample at a higher rate to avoid losing information that should be in the signal. In general, you want to sample at *twice* the maximum frequency of the signal, known as the **Nyquist rate**.
+#### Temporal Aliasing
+Aliasing caused by sampling over time: the temporal domain. This commonly is referred to as the "Wagon Wheel Effect". Sometimes this can be a desired effect, but not in our case!
+### Antialiasing
+The "anti" comes from our efforts to remove this unwanted effect from our render engines. The quickest and simplest way to implement some **antialiasing** in our ray caster is to have random jittered samples per pixel, the same technique we're using for our area lights.
+#### Distributed Raytracing
+This approach is similar to our previous random jitter approaches, but this method will remove **temporal aliasing** and obtain out-of-focus effects caused by lenses.
+1. Obtain a pixel region
+2. Treat the pixel region as a window
+3. Subdivide the pixel region
+4. Obtain the subpixel region
