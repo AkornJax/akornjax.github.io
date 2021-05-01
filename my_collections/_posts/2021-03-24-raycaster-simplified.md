@@ -20,6 +20,7 @@ My goal with this article is to abstract the concepts of a raycaster away from t
       - [Distributed Raytracing](#distributed-raytracing)
     - [Final Gathering](#final-gathering)
   - [Lazy/Quick Implementation](#lazyquick-implementation)
+    - [Cons](#cons)
   - [Better Implementation](#better-implementation)
 
 ## The Basics
@@ -140,5 +141,12 @@ For these imagine we have a textured (although it's white for Ambient Occlusion)
 | Caustics                 | Compute Refractive or Specular | Color of Infinite Sphere |
 
 ## Lazy/Quick Implementation
-With this implementation we will simply be adding a random vector 
+With this implementation we will simply be adding a random vector, and with multiple samples, average the result to get our result.
+### Cons
+We most likely won't accurately portray the space without excessive sampling. Additionally, this could result in supersampling noise.
 ## Better Implementation
+Use directions provided by a *guide shape*. Some recommended shapes:
+- Parameteric Hemisphere
+- Subdivided Hemicube
+- Geodesic Domes
+We're going to use 
