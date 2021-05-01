@@ -149,9 +149,9 @@ With this implementation we will simply be adding a random vector, and with mult
 4. Compute weight of ray
    1. `G_w = dot(N_i, G_i);`
 5. Compute weighted color
-   1. `wC = G_w * C_i;`
+   1. `C_w = G_w * C_i;`
 6. Compute final color to get weighted average of colors
-   1. `final_color = wC / w;`
+   1. `final_color = C_w / G_w;`
 ### Cons
 We most likely won't accurately portray the space without excessive sampling. Additionally, this could result in supersampling noise.
 ## Better Implementation
