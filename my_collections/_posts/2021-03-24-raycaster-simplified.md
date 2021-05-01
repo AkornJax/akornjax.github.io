@@ -142,6 +142,16 @@ For these imagine we have a textured (although it's white for Ambient Occlusion)
 
 ## Lazy/Quick Implementation
 With this implementation we will simply be adding a random vector, and with multiple samples, average the result to get our result.
+1. Calculate the direction of our **gathering** ray `G_i`
+   1. `G_i = length(N_i + randomVector());`
+2. Compute `C_i` (color at intersection of `P_h`)
+3. Shoot ray from `G_i` 
+4. Compute weight of ray
+   1. `G_w = dot(N_i, G_i);`
+5. Compute weighted color
+   1. `wC = G_w * C_i;`
+6. Compute final color to get weighted average of colors
+   1. `final_color = wC / w;`
 ### Cons
 We most likely won't accurately portray the space without excessive sampling. Additionally, this could result in supersampling noise.
 ## Better Implementation
@@ -149,4 +159,4 @@ Use directions provided by a *guide shape*. Some recommended shapes:
 - Parameteric Hemisphere
 - Subdivided Hemicube
 - Geodesic Domes
-We're going to use 
+We're going to use these shapes as guides to distribute our samples, as opposed to trust a sequence of random vectors to do an even job. 
