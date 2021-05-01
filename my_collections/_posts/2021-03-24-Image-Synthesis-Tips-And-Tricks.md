@@ -59,6 +59,7 @@ This also helps you slow down and actually take the time to understand the conce
 
 ### Are there any great suppplimental resources?
 Yes! There are many! Here's a list:
+- [My very own write-up!]({% post_url 2021-03-24-raycaster-simplified %})
 - [Scratchapixel](https://www.scratchapixel.com/index.php?redirect)
   - Walks you through implementation of a lot of the ray caster functionalities, with fantastic diagrams and explanations.
 - [Real-Time Rendering - Blog & Resources](https://www.realtimerendering.com/raytracing.html)

@@ -6,6 +6,7 @@ title: Raycaster Simplified - C++
 
 > [!NOTE]
 > Will eventually use http://sangsoonam.github.io/2019/01/20/syntax-highlighting-in-jekyll.html to color code
+
 My goal with this article is to abstract the concepts of a raycaster away from the noisy mathamatics that drive the implementation. Taking a step back and learning the ideas will give us the ability to easily apply these concepts to future works. Any examples of implementation will be C++ focused and peripherials such as window creation are ignored, as I simply utilized basic OpenGL for those portions. 
 - [Materials](#materials)
   - [Reflection](#reflection)
