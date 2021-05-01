@@ -7,23 +7,19 @@ title: Raycaster Simplified - C++
 > [!NOTE]
 > Will eventually use http://sangsoonam.github.io/2019/01/20/syntax-highlighting-in-jekyll.html to color code
 My goal with this article is to abstract the concepts of a raycaster away from the noisy mathamatics that drive the implementation. Taking a step back and learning the ideas will give us the ability to easily apply these concepts to future works. Any examples of implementation will be C++ focused and peripherials such as window creation are ignored, as I simply utilized basic OpenGL for those portions. 
-- [The Basics](#the-basics)
-- [Raycaster Structure](#raycaster-structure)
-  - [Ray](#ray)
-  - [Camera](#camera)
-- [Creating Primatives](#creating-primatives)
-  - [Sphere](#sphere)
-  - [Plane](#plane)
-- [Lights](#lights)
-  - [Point](#point)
-  - [Spot](#spot)
-  - [Area](#area)
-- [Shadows](#shadows)
-  - [Avoiding Self-Shadowing](#avoiding-self-shadowing)
-- [Transformations](#transformations)
-- [Texture Mapping](#texture-mapping)
-  - [The Basic Idea](#the-basic-idea)
-- [Triangle Meshes](#triangle-meshes)
+- [Materials](#materials)
+  - [Reflection](#reflection)
+  - [Refraction](#refraction)
+  - [Texture Mapping](#texture-mapping)
+  - [Triangle Meshes](#triangle-meshes)
+  - [Distributed Raytracer](#distributed-raytracer)
+    - [Aliasing](#aliasing)
+      - [Temporal Aliasing](#temporal-aliasing)
+    - [Antialiasing](#antialiasing)
+      - [Distributed Raytracing](#distributed-raytracing)
+    - [Final Gathering](#final-gathering)
+  - [Lazy/Quick Implementation](#lazyquick-implementation)
+  - [Better Implementation](#better-implementation)
 
 ## The Basics
 ### Raycaster Structure
@@ -131,3 +127,17 @@ This approach is similar to our previous random jitter approaches, but this meth
 2. Treat the pixel region as a window
 3. Subdivide the pixel region
 4. Obtain the subpixel region
+
+### Final Gathering
+Final gathering allows us to obtain four unique effects.
+For these imagine we have a textured (although it's white for Ambient Occlusion), infinite sphere. We shoot rays from the *first* shading point. If they intersect with an object, we choose black, otherwise we choose white. 
+
+| Effect                   | Intersection            | No Intersection          |
+| Ambient Occlusion        | Black                   | White                    |
+| Environment Illumination | Black                   | Color of Infinite Sphere |
+| Color Bleeding           | Diffuse Color | Color of Infinite Sphere |
+| Caustics                 | Compute Refractive or Specular | Color of Infinite Sphere |
+
+## Lazy/Quick Implementation
+With this implementation we will simply be adding a random vector 
+## Better Implementation
