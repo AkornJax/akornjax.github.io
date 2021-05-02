@@ -81,6 +81,20 @@ Panacea:
       The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
     status: Complete for now.
 
+TactiLaika:
+    priority: 1
+    background-image-url: /assets/img/controlLoss.png
+    engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
+    blog-page: "page path"
+    youtube-key: 
+    images-folder: "folder"
+    breakdown-url: /projects/tactilaika
+    itchio-url:
+    project-blurb: Playable WebGL build
+    bullets:
+    extra:
+    status:
+
 A Knightly Sale:
     priority: 1
     background-image-url: /assets/img/knightlySale.png
@@ -90,7 +104,7 @@ A Knightly Sale:
     images-folder: "folder"
     breakdown-url: /projects/aknightlysale
     itchio-url:
-    project-blurb:
+    project-blurb: Playable WebGL build
     bullets:
     extra: |
 
@@ -103,10 +117,11 @@ Control Loss:
     images-folder: "folder"
     breakdown-url: /projects/controlloss
     itchio-url:
-    project-blurb:
+    project-blurb: Playable WebGL build
     bullets:
     extra:
     status:
+
 
 # Project Into The Breach:
 #     background-image-url: /assets/img/knightlySale.png

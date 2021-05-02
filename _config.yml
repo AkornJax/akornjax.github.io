@@ -14,13 +14,15 @@ author: Christopher Kornosky
 navbar-links:
   About Me / Resume: "aboutme"
   Projects: "projects"
-  Portfolio:
+  Portfolios:
   - Game Development: "gamedevelopment-portfolio"  
-  - Code Samples: "code-samples"
-  Art: "art"
-  Incomplete:
-  - VIZA656: "viza656home"
   - 3DWorks: "3dart"
+ # - Code Samples: "code-samples"
+  Art: "art"
+  Classes:
+  - VIZA656: "viza656home"
+  Blogs: "blog"
+  
  # Contact: "contact"
 
 # --- Logo --- #
