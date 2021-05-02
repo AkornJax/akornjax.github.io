@@ -16,8 +16,12 @@ My goal with this article is to abstract the concepts of a raycaster away from t
   - [Distributed Raytracer](#distributed-raytracer)
     - [Aliasing](#aliasing)
       - [Temporal Aliasing](#temporal-aliasing)
-    - [Antialiasing](#antialiasing)
-      - [Distributed Raytracing](#distributed-raytracing)
+      - [Antialiasing](#antialiasing)
+    - [Distributed Raytracing](#distributed-raytracing)
+      - [Motion Blur](#motion-blur)
+      - [Out-Of-Focus / DOF](#out-of-focus--dof)
+      - [Gloss](#gloss)
+      - [Translucency](#translucency)
     - [Final Gathering](#final-gathering)
   - [Lazy/Quick Implementation](#lazyquick-implementation)
     - [Cons](#cons)
@@ -53,6 +57,7 @@ The ray will intersect the sphere using the equation `insert equation here` and 
 Lights quickly make your computer go brrrrr, this is due to their costly implementation! Lights will be the beginning of our journey to follow a ray and gather data past the initial intersection. We'll now be able to compute the **diffuse intensity** of our pixel! No more flat shading, but note that we're not to casting shadows yet. 
 ### Point 
 ### Spot
+
 ### Area
 
 ## Shadows
@@ -121,18 +126,28 @@ Triangles are how we're going to start including the REALLY cool shapes into our
 Because we are simply sending out a single ray from the center of each pixel, we don't have beautiful, smooth edges. This effect of jagged pixels is called **aliasing**. Sampling "the shape" higher than the **Nyquist frequency** allows us to avoid aliasing. The **Nyquist frequency** is a characteristic of a sampler (our raycaster which *samples* pixels) that converts a continuous function/signal into a discrete (enumerable) sequence. Because we have a high frequency of data, we'll need to sample at a higher rate to avoid losing information that should be in the signal. In general, you want to sample at *twice* the maximum frequency of the signal, known as the **Nyquist rate**.
 #### Temporal Aliasing
 Aliasing caused by sampling over time: the temporal domain. This commonly is referred to as the "Wagon Wheel Effect". Sometimes this can be a desired effect, but not in our case!
-### Antialiasing
+#### Antialiasing
 The "anti" comes from our efforts to remove this unwanted effect from our render engines. The quickest and simplest way to implement some **antialiasing** in our ray caster is to have random jittered samples per pixel, the same technique we're using for our area lights.
-#### Distributed Raytracing
+### Distributed Raytracing
 This approach is similar to our previous random jitter approaches, but this method will remove **temporal aliasing** and obtain out-of-focus effects caused by lenses.
 1. Obtain a pixel region
 2. Treat the pixel region as a window
 3. Subdivide the pixel region
 4. Obtain the subpixel region
+#### Motion Blur
+Haha not sure about yet. 
+#### Out-Of-Focus / DOF
+To achieve this effect we will specify a focus distance, `focus_distance`, along a our usual Camera ray. That point will then be used to alter the directions of the randomly distributed rays on the pixel region. The rays will converge at the focal point, so any rays hitting before and after the point will be spread out causing our blur effect! 
+#### Gloss
+Gloss is just blurred reflection. The blurring can probably be creating using our sub-pixel region logic, **but** a much easier approach is to simply randomly distribute the reflecting ray. The max of this random distribution will control how glossy the object will look. 
+#### Translucency 
+Virtually the same as gloss, except this time we're blurring the refraction of the rays. Again, you can use either the sub-pixel logic or randomly distributing the refracted ray.
+
 
 ### Final Gathering
 Final gathering allows us to obtain four unique effects.
 For these imagine we have a textured (although it's white for Ambient Occlusion), infinite sphere. We shoot rays from the *first* shading point. If they intersect with an object, we choose black, otherwise we choose white. 
+> [!NOTE] It's a good idea to make sure your new **gathering** rays have a distance at which they die, that way your objects aren't being occluded/influenced by objects that are miles away!
 
 | Effect                   | Intersection            | No Intersection          |
 | Ambient Occlusion        | Black                   | White                    |
@@ -141,9 +156,9 @@ For these imagine we have a textured (although it's white for Ambient Occlusion)
 | Caustics                 | Compute Refractive or Specular | Color of Infinite Sphere |
 
 ## Lazy/Quick Implementation
-With this implementation we will simply be adding a random vector, and with multiple samples, average the result to get our result.
-1. Calculate the direction of our **gathering** ray `G_i`
-   1. `G_i = length(N_i + randomVector());`
+With this implementation we will simply be adding a random vector, and with multiple samples, average to get our result.
+1. Calculate the normalized direction of our **gathering** vector `G_i`
+   1. `G_i = length(N_i + randomUnitVector());`
 2. Compute `C_i` (color at intersection of `P_h`)
 3. Shoot ray from `G_i` 
 4. Compute weight of ray
@@ -152,6 +167,7 @@ With this implementation we will simply be adding a random vector, and with mult
    1. `C_w = G_w * C_i;`
 6. Compute final color to get weighted average of colors
    1. `final_color = C_w / G_w;`
+
 ### Cons
 We most likely won't accurately portray the space without excessive sampling. Additionally, this could result in supersampling noise.
 ## Better Implementation
