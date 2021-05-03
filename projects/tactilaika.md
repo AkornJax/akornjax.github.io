@@ -6,6 +6,14 @@ title: Tacti-Laika
 <div style="align-content: center;">
    <iframe frameborder="0" src="https://itch.io/embed-upload/3751331?color=333333" allowfullscreen="" width="1280" height="720"><a href="https://undeadknight11.itch.io/tacti-laika">Play Tacti-Laika on itch.io</a></iframe>
 </div>
+
+Third Place in TAGD Semester Game Jam - Spring 2021
+
+# Team:
+Me - Programming
+Chloe Gordon - Character sprites + animation & Title graphic
+Joshua Martin - UI & Environment Art
+
 # Controls: 
 Mouse 
 
