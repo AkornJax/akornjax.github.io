@@ -36,7 +36,7 @@ The quickest approach I know to this is utilizing the power of multi-threading a
 ```
 All it's doing is allocating the execution of each loop iteration to the next available core. So instead of having one thread running through these instructions, I have six! So it's 6x faster.
 
-### The quizzes are annoyingly plug-and-chug, is there anything better than WolframAlpha?
+### The quizzes seem to be plug-and-chug, is there anything better than WolframAlpha?
 Yes! Admittedly I was using WolframAlpha for a majority of the quizzes, but then I remembered that I'm a programmer and I should start acting like one! I used Python (in VSCode, my preffered IDE) to blaze through the quizzes, allowing me to make mistakes and be able to quickly recalulate subsequent submissions by changing the initial variables. If you're interested, it'll look something like this: 
 ```
 import numpy as numpy
