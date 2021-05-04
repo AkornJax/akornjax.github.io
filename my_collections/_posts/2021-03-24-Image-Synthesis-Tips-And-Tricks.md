@@ -62,6 +62,8 @@ Yes! There are many! Here's a list:
 - [My very own write-up!]({% post_url 2021-03-24-raycaster-simplified %})
 - [Scratchapixel](https://www.scratchapixel.com/index.php?redirect)
   - Walks you through implementation of a lot of the ray caster functionalities, with fantastic diagrams and explanations.
+- [The Ray Tracer Challenge](http://www.raytracerchallenge.com/)
+  - A test-driven, language agnostic approach to creating a raytracer from scratch. This makes a fantastic suppliment to the topics as well as introduces the test driven approach to software/program development. 
 - [Real-Time Rendering - Blog & Resources](https://www.realtimerendering.com/raytracing.html)
   - INCREDIBLE resource for those hungry for more information and applications. The entire website is pure gold and worth a browse. 
   - Books section has a lot of great content, the ones I checked out:

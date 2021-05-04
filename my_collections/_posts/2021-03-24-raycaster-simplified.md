@@ -46,10 +46,10 @@ This will be a template for your raycaster to follow. Simply use it as a suggest
 ### Ray
 A raycaster begins with the ray, which is a line that only has a **starting point** and a **direction**. The primary rays that we will be shooting from our camera will be in charge of detecting intersections within our virtual world and subsequently returning a pixel color.
 ### Camera
-Your camera is your **eye** into this virtual world that you're creating. A perspective camera requires an **eye** and the render plane, while an orthographic camera would only need the render plane.
+Your camera is your **eye** into this virtual world that you're creating. A perspective camera requires an **eye** and the render plane. Meanwhile an orthographic camera would only need the render plane.
 Quick example: If we are making a 600px by 600px window, then we will be shooting out 360,000 (600 * 600) rays from the render plane! 
 ## Creating Primatives
-To begin, we will need to create some to actually render... Primatives are representations of mathamatical models within the 3-Dimensional space that we're creating.
+To begin, we will need to create some content to actually render into our virtual world. Primatives are representations of mathamatical models within the 3-Dimensional space that we're creating.
 ### Sphere
 The ray will intersect the sphere using the equation `insert equation here` and then will return the **diffuse color** assigned. 
 ### Plane
