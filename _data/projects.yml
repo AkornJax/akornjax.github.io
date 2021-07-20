@@ -15,7 +15,7 @@ Lucis Lemonade Stand:
     extra: |
       Worked in a team of 7 over the duration of 10 weeks for TAMU Summer Game Studio 2020
       Design decisions were focused on creating modular systems, emergent gameplay through physics-based interactions, and easily extendable gameplay.
-    status: Finished, interested in recreating in Unreal Engine.
+    status: Finished
 
 Beleaguered Woods:
     priority: 2
@@ -35,29 +35,27 @@ Beleaguered Woods:
     extra: |
       Student project made in 14 weeks for TAMU Fall Game Studio 2020. <br><br>
       Originally started in Amazon Lumberyard and was being designed as a multiplayer party game, drastic changes were made 3-4 weeks into development due to the learning curve of Lumberyard and general scope issues.
-    status: Finished, but being converted to C++ for practice.
+    status: Finished
 
-Medieval RPS:
+Orbies Adventures:
     priority: 2
-    background-image-url: /assets/img/background-blur.png
-    engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
+    background-image-url: /assets/img/SpaceOrbie.png
+    engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="UE4" />
     blog-page: "page path"
-    youtube-key: FIla7YmwZHg
-    images-folder: medievalrps
-    breakdown-url: /projects/medievalrps
-    itchio-url: https://undeadknight11.itch.io/medievalrps
-    project-blurb: Play Rock, Paper, Scissors against giant skeletons, defending your castle from its imminent demise.
+    youtube-key: 4mOGx83fK-4
+    images-folder: orbiesadventures
+    breakdown-url: /projects/orbiesadventures
+    itchio-url:
+    project-blurb: Animated short film about a precocious bear named Orbie who leaves his homeworld to fulfill a lifelong dream of visiting Earth.
     bullets:
-        - Done 100% in Blueprints.
-        - All programming and implementation
-        - Modeled, textured, rigged, and animated player hands
-        - Conceptualized, rigged, and animated 2D skeleton bosses
-        - Created UE4 materials for displaying status effects
+        - Technical and Programming Lead
+        - Created for Rotary International's Houston Convention
+        - Created dynamic, sequencer-controllable effects with Niagara
+        - Responsible for scene layout up to the final renders
     extra: |
-      Created for the TAMU Game Studio Fall 2019. 
-      Conceived during a game jam at the beginning of the semester with the prompt of “rock, paper, scissors” and decided to stick with the game idea and push it as far as possible. 
-      Two-player co-op game where you play rock, paper, scissors against giant skeletons using the mystical power of the jewelry given “accidentally” by the first skeleton.
-    status: Finished, but interested in recreating it.
+      Worked in a team of 6 to complete this 12 minute animated short in the span of four months. The deadline got pushed forward multiple weeks
+      causing extreme crunch, but overall the result is enjoyable for the circumstances.
+    status: Finished
 
 Panacea:
     priority: 2
@@ -79,7 +77,29 @@ Panacea:
     extra: |
       Worked with a team of three to make a turn-based RPG in the span of two weeks. 
       The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
-    status: Complete for now.
+    status: Complete for now
+
+Medieval RPS:
+    priority: 1
+    background-image-url: /assets/img/background-blur.png
+    engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
+    blog-page: "page path"
+    youtube-key: FIla7YmwZHg
+    images-folder: medievalrps
+    breakdown-url: /projects/medievalrps
+    itchio-url: https://undeadknight11.itch.io/medievalrps
+    project-blurb: Play Rock, Paper, Scissors against giant skeletons, defending your castle from its imminent demise.
+    bullets:
+        - Done 100% in Blueprints.
+        - All programming and implementation
+        - Modeled, textured, rigged, and animated player hands
+        - Conceptualized, rigged, and animated 2D skeleton bosses
+        - Created UE4 materials for displaying status effects
+    extra: |
+      Created for the TAMU Game Studio Fall 2019. 
+      Conceived during a game jam at the beginning of the semester with the prompt of “rock, paper, scissors” and decided to stick with the game idea and push it as far as possible. 
+      Two-player co-op game where you play rock, paper, scissors against giant skeletons using the mystical power of the jewelry given “accidentally” by the first skeleton.
+    status: Finished, but interested in recreating it.
 
 TactiLaika:
     priority: 1
