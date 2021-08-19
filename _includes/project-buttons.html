@@ -3,43 +3,46 @@
   <div class="row d-flex ">
   {% for project in site.data.projects %} 
 
-  {% assign name = project[0] %}
-  {% assign game = site.data.projects[name] %}
-  {% assign priority = game.priority %}
-
-  {% case include.size %}
-    {% when "spread" %}
-      {% case priority %}
-        {% when 2 %}
-         {% assign size = 6 %}
-        {% when 1 %}
-          {% assign size = 4 %}
+      {% assign name = project[0] %}
+      {% assign game = site.data.projects[name] %}
+      {% assign priority = game.priority %}
+      {% if game.type == include.type or include.type == "all" %}
+    
+      {% case include.size %}
+        {% when "spread" %}
+          {% case priority %}
+            {% when 2 %}
+            {% assign size = 6 %}
+            {% when 1 %}
+              {% assign size = 4 %}
+            {% else %}
+              {% assign size = 2 %}
+          {% endcase %}
+        {% when "medium" %}
+            {% case priority %}
+              {% when 2 %}
+                {% assign size = 3 %}
+              {% when 1 %}
+                {% assign size = 2 %}
+              {% else %}
+                {% assign size = 1 %}
+          {% endcase %}
         {% else %}
-          {% assign size = 2 %}
+              {% assign size = 1 %}
       {% endcase %}
-    {% when "medium" %}
-        {% case priority %}
-          {% when 2 %}
-            {% assign size = 3 %}
-          {% when 1 %}
-            {% assign size = 2 %}
-          {% else %}
-            {% assign size = 1 %}
-       {% endcase %}
-    {% else %}
-          {% assign size = 1 %}
-  {% endcase %}
 
-    <div class="grow col-lg-{{size}} col-md-{{size}} col-sm-12 col-12 column p-2 hidden d-flex justify-content-center"
-      onclick="location.href='{{project[1].breakdown-url}}';"
-      style="cursor: pointer; background-image: url('{{project[1].background-image-url}}');">
-      <div class="project-text-container ">
-        <h4>{{name}}</h4>
-        {% if include.size == "spread" %}
-        <p>{{game.project-blurb}}</p>
-        {% endif %}
-      </div>
-    </div>
+        <div class="grow col-lg-{{size}} col-md-{{size}} col-sm-12 col-12 column p-2 hidden d-flex justify-content-center"
+          onclick="location.href='{{project[1].breakdown-url}}';"
+          style="cursor: pointer; background-image: url('{{project[1].background-image-url}}'); background-size: contain;">
+          <div class="project-text-container ">
+            <h4>{{name}}</h4>
+            {% if include.size == "spread" %}
+            <p>{{game.project-blurb}}</p>
+            {% endif %}
+          </div>
+        </div>
+    {% endif %}
   {% endfor %}
   </div>
 </div>
+  

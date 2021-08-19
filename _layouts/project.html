@@ -7,6 +7,7 @@ layout: default
 {% include youtube.html youtubeID=youtubeIDD %}
 {% include carousel.html name=game.images-folder height="50" unit="%" duration="7" %}
 
+
 <div class="container">
   <div class="row g-4">
     <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex hidden">
@@ -27,17 +28,24 @@ layout: default
     </div>
   </div>
 </div>
-
+<!--more-->
 <br>
 <b>Status:</b> {{game.status}}
 <br>
+{% if game.links %}
 <b>Links:</b>
-<ul>
-  <li>
-    ​<a href="{{game.itchio-url}}">
-      Play on Itch.io </a>
-  </li>
-<!--  <li>
-    <a href="{{game.blog-page}}"> Postmortem Blog </a>
-  </li>-->
-</ul>
+  {% for item in game.links %}  
+  {% assign data = item | split:", "%}
+  <ul>
+    <li>
+      ​<a href="{{data.last}}">
+        {{data.first}} </a>
+    </li>
+  <!--  <li>
+      <a href="{{game.blog-page}}"> Postmortem Blog </a>
+    </li>-->
+  </ul>
+  {% endfor %}
+{% endif %}
+
+

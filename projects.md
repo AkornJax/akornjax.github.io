@@ -4,4 +4,4 @@ title: Projects
 subtitle: 
 ---
 
-{%include project-buttons.html size="spread" %}
+{%include project-buttons.html size="spread" type="all" %}

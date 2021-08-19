@@ -1,5 +1,6 @@
 Lucis Lemonade Stand:
     priority: 2
+    type: game
     background-image-url: /assets/img/lls.png
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
@@ -16,9 +17,11 @@ Lucis Lemonade Stand:
       Worked in a team of 7 over the duration of 10 weeks for TAMU Summer Game Studio 2020
       Design decisions were focused on creating modular systems, emergent gameplay through physics-based interactions, and easily extendable gameplay.
     status: Finished
+    links:
 
 Beleaguered Woods:
     priority: 2
+    type: game
     background-image-url: /assets/img/bw.png
     engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
     blog-page: "page path"
@@ -36,9 +39,12 @@ Beleaguered Woods:
       Student project made in 14 weeks for TAMU Fall Game Studio 2020. <br><br>
       Originally started in Amazon Lumberyard and was being designed as a multiplayer party game, drastic changes were made 3-4 weeks into development due to the learning curve of Lumberyard and general scope issues.
     status: Finished
+    links:
+      - Play on Itch.io, https://undeadknight11.itch.io/beleagueredwoods
 
 Orbies Adventures:
     priority: 2
+    type: game
     background-image-url: /assets/img/SpaceOrbie.png
     engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="UE4" />
     blog-page: "page path"
@@ -56,9 +62,11 @@ Orbies Adventures:
       Worked in a team of 6 to complete this 12 minute animated short in the span of four months. The deadline got pushed forward multiple weeks
       causing extreme crunch, but overall the result is enjoyable for the circumstances.
     status: Finished
+    links:
 
 Panacea:
     priority: 2
+    type: game
     background-image-url: /assets/img/p-blur.png
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
@@ -78,9 +86,11 @@ Panacea:
       Worked with a team of three to make a turn-based RPG in the span of two weeks. 
       The game was conceived to emphasize and bring awareness to the importance of social distancing in combating the spread of COVID-19.
     status: Complete for now
+    links:
 
 Medieval RPS:
     priority: 1
+    type: game
     background-image-url: /assets/img/background-blur.png
     engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
     blog-page: "page path"
@@ -100,9 +110,11 @@ Medieval RPS:
       Conceived during a game jam at the beginning of the semester with the prompt of “rock, paper, scissors” and decided to stick with the game idea and push it as far as possible. 
       Two-player co-op game where you play rock, paper, scissors against giant skeletons using the mystical power of the jewelry given “accidentally” by the first skeleton.
     status: Finished, but interested in recreating it.
+    links:
 
 TactiLaika:
     priority: 1
+    type: game
     background-image-url: /assets/img/controlLoss.png
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
@@ -114,9 +126,11 @@ TactiLaika:
     bullets:
     extra:
     status:
+   
 
 A Knightly Sale:
     priority: 1
+    type: game
     background-image-url: /assets/img/knightlySale.png
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
@@ -130,6 +144,22 @@ A Knightly Sale:
 
 Control Loss:
     priority: 1
+    type: game
+    background-image-url: /assets/img/controlLoss.png
+    engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
+    blog-page: "page path"
+    youtube-key: 
+    images-folder: "folder"
+    breakdown-url: /projects/controlloss
+    itchio-url:
+    project-blurb: Playable WebGL build
+    bullets:
+    extra:
+    status:
+
+Epic Vase:
+    priority: 1
+    type: houdini
     background-image-url: /assets/img/controlLoss.png
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"

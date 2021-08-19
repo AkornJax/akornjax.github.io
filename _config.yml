@@ -15,10 +15,12 @@ navbar-links:
   About Me / Resume: "aboutme"
   Projects: "projects"
   Portfolios:
+  - Houdini: "houdini-projects"
   - Game Development: "gamedevelopment-portfolio"  
-  - 3DWorks: "3dart"
  # - Code Samples: "code-samples"
-  Art: "art"
+  Misc Art:
+  - 2D: "art"
+  - 3D: "3dart"
   Classes:
   - VIZA656: "viza656home"
   Blogs: "blog"
