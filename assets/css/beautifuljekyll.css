@@ -1,6 +1,15 @@
 ---
 layout: null
 ---
+/** Buttons */
+.project-button-icon {
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
 /**mobile tests*/
 /** icons */
 .icon-background{
@@ -91,7 +100,7 @@ layout: null
 
 .project-text-container{
   background-color: rgba(255,255,255,.5);
-  background: radial-gradient(#0000009e 50%, #9198e500 80%);
+  background: radial-gradient(#0014259e 60%, #9198e500 80%);
   border-radius: 5px;
   display: inline-block;
   position: relative;

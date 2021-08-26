@@ -1,11 +1,11 @@
 Lucis Lemonade Stand:
+    key: lucis-lemonade-stand
     priority: 2
-    type: game
-    background-image-url: /assets/img/lls.png
+    types: 
+    - type: game
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
     youtube-key: Y_U_a9qxtlQ
-    images-folder: lucis
     breakdown-url: /projects/lucis
     itchio-url: https://undeadknight11.itch.io/lucis-lemonade-stand
     project-blurb: Serve beverages to the denizens of this hellish suburbia.
@@ -20,13 +20,13 @@ Lucis Lemonade Stand:
     links:
 
 Beleaguered Woods:
+    key: beleaguered-woods
     priority: 2
-    type: game
-    background-image-url: /assets/img/bw.png
+    types: 
+    - type: game
     engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
     blog-page: "page path"
     youtube-key: I2E485B-INg
-    images-folder: bwoods
     breakdown-url: /projects/beleagueredwoods
     itchio-url: https://undeadknight11.itch.io/beleagueredwoods
     project-blurb: Traverse the magical forest - fulfill your duty as the Seeker and return the ghosts to the fountain.
@@ -43,9 +43,10 @@ Beleaguered Woods:
       - Play on Itch.io, https://undeadknight11.itch.io/beleagueredwoods
 
 Orbies Adventures:
+    key: orbies-adventures
     priority: 2
-    type: game
-    background-image-url: /assets/img/SpaceOrbie.png
+    types: 
+    - type: game
     engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="UE4" />
     blog-page: "page path"
     youtube-key: 4mOGx83fK-4
@@ -64,10 +65,11 @@ Orbies Adventures:
     status: Finished
     links:
 
-Panacea:
+Panacea Game:
+    key: panacea
     priority: 2
-    type: game
-    background-image-url: /assets/img/p-blur.png
+    types: 
+    - type: game
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
     youtube-key: 948EMzf3IWo
@@ -89,13 +91,14 @@ Panacea:
     links:
 
 Medieval RPS:
+    key: medieval-rps
     priority: 1
-    type: game
-    background-image-url: /assets/img/background-blur.png
+    types: 
+    - type: game
+    background-image-url: 
     engine: <img src="/assets/img/icons/unreal-engine.svg" class="icon-background" alt="Unreal Engine" />
     blog-page: "page path"
     youtube-key: FIla7YmwZHg
-    images-folder: medievalrps
     breakdown-url: /projects/medievalrps
     itchio-url: https://undeadknight11.itch.io/medievalrps
     project-blurb: Play Rock, Paper, Scissors against giant skeletons, defending your castle from its imminent demise.
@@ -112,10 +115,11 @@ Medieval RPS:
     status: Finished, but interested in recreating it.
     links:
 
-TactiLaika:
+Tacti-Laika:
+    key: tacti-laika
     priority: 1
-    type: game
-    background-image-url: /assets/img/controlLoss.png
+    types: 
+    - type: game
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
     youtube-key: 
@@ -129,9 +133,10 @@ TactiLaika:
    
 
 A Knightly Sale:
+    key: a-knightly-sale
     priority: 1
-    type: game
-    background-image-url: /assets/img/knightlySale.png
+    types: 
+    - type: game
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
     youtube-key: 
@@ -143,9 +148,10 @@ A Knightly Sale:
     extra: |
 
 Control Loss:
+    key: control-loss
     priority: 1
-    type: game
-    background-image-url: /assets/img/controlLoss.png
+    types: 
+    - type: game
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
     youtube-key: 
@@ -157,10 +163,11 @@ Control Loss:
     extra:
     status:
 
-Epic Vase:
+Weird Vase Generator:
+    key: weird-vase-generator
     priority: 1
-    type: houdini
-    background-image-url: /assets/img/controlLoss.png
+    types: 
+    - type: houdini
     engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
     blog-page: "page path"
     youtube-key: 
@@ -169,6 +176,24 @@ Epic Vase:
     itchio-url:
     project-blurb: Playable WebGL build
     bullets:
+    extra:
+    status:
+
+Downtown Bryan Building Collapse:
+    key: downtown-bryan-building-collapse
+    priority: 1
+    types: 
+    - type: film
+    - type: houdini
+    engine: <img src="/assets/img/icons/unity.svg" class="icon-background" alt="Unity" />
+    blog-page: "page path"
+    youtube-key: kLLzAP9KgCo
+    images-folder: "folder"
+    breakdown-url: /projects/downtown-bryan-building-collapse
+    itchio-url:
+    project-blurb: A CGI scene of a building in Bryan, TX being hit by a meteor
+    bullets:
+      - Made in six months.
     extra:
     status:
 
