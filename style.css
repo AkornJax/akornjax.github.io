@@ -1,0 +1,118 @@
+/* Dark theme styles */
+
+/* Change the background color to dark gray */
+body {
+  background-color: #333333;
+}
+
+/* Change the text color to white */
+h1, h2, h3, h4, h5, h6, p, a, li, label{
+  color: white;
+}
+
+/* Change the background color of buttons to dark gray */
+.pure-button {
+  background-color: #333333;
+}
+
+body {
+  padding: 20px;
+}
+
+section {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+img {
+  max-width: 50%;
+  max-height: 30%;
+  opacity: 1;
+  /* add this */
+  transition: opacity 1s;
+  /* add this */
+}
+
+#pageTitle {
+  text-align: center;
+}
+
+#banner {
+  background-image: url("https://www.w3schools.com/w3images/forestbridge.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  width: 100%;
+  position: relative;
+}
+
+section#about-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-header {
+  text-align: right;
+}
+
+section#services-inner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#random-pet {
+  width: 100%;
+  /* full width of the banner */
+  height: 100%;
+  /* full height of the banner */
+  object-fit: cover;
+  /* scale the image to cover the banner */
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+footer {
+  background-color: #5d5d5d;
+  padding: 10px;
+  text-align: center;
+}
+.social-links {
+  display: flex;
+  justify-content: center;}
+
+.social-links a {
+  margin: 0 10px;
+  color: rgb(169, 169, 169);
+  font-size: 20px;
+}
+
+.social-links a:hover {
+  color: #0077ff;
+}
+
+body {
+  background: linear-gradient(to bottom, #303030 0%, #161616 100%);
+  font-size: 2.5rem;
+}
+
+/* Smaller font size for smaller screens */
+@media (max-width: 600px) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+/* Larger font size for larger screens */
+@media (min-width: 900px) {
+  body {
+    font-size: 1.5rem;
+  }
+}
