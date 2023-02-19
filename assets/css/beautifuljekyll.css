@@ -68,8 +68,21 @@ hr.small {
   border-radius: 0.1875rem;
 }
 
+.jumbotron {
+  background-color: {{ site.jumbotron-col | default: "#FFFFFF" }};
+  border-radius: 0;
+  padding: 2.5rem;
+  margin-bottom: 0;
+  {% if site.jumbotron-img %}
+  background-image: url({{ site.jumbotron-img | relative_url }});
+  background-attachment: fixed;
+  {% endif %}
+}
+
 .btn {
   font-family: "Open Sans", sans-serif;
+  color: #FFFFFF;
+  background-color: {{ site.btn-col | default: "#404040" }};
 }
 
 /* fix in-page anchors to not be behind fixed header */
