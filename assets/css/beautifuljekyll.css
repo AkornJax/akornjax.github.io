@@ -68,6 +68,10 @@ hr.small {
   border-radius: 0.1875rem;
 }
 
+.btn {
+  font-family: "Open Sans", sans-serif;
+}
+
 /* fix in-page anchors to not be behind fixed header */
 :target:before {
   content: "";
@@ -1002,6 +1006,8 @@ pre {
   border-color: #808080;
 }
 
+
+
 .blog-post blockquote {
   padding: 0.625rem 1.25rem;
   margin: 0 0 1.25rem;
@@ -1017,7 +1023,12 @@ pre {
   display: block;
   margin: 0 auto;
 }
-
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 /* Search bar */
 #beautifuljekyll-search-overlay {
   display: none;
