@@ -21,7 +21,7 @@ author: Christopher Kornosky
 
 navbar-links:
   About Me: "#aboutme"
-  Contact: "#contact"
+  Contact: "_layout/contactme"
 
 
 ################
